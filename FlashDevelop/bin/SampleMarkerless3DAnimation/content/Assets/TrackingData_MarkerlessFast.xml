@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<!--	Sample tracking configuration for using the "fast" markerless tracker. 
+		The tracking does "localization" and then "interframe tracking".
+		This kind of sensor tracks planar objects (printed images, posters, 
+		etc.) by matching their intensities. The "fast" variant has the 
+		following properties: 
+		- It works at higher framerates. 
+		- It is able to track multiple planar objects simultaneously. 
+		- It can be sensitive to occlusions, specularities and light changes. 
+		Unless otherwise noted, all the values used in this configuration are 
+		the default values. 
+		-->
+
+<TrackingData>
+	<Sensors>
+		<!--	Use the "Fast" variant of the "FeatureBasedSensorSource". The
+				characteristics of this tracker are explained above. -->
+		<Sensor Type="FeatureBasedSensorSource" Subtype="Fast">
+
+			<!--	Assign an ID to this sensor -->
+			<SensorID>FeatureTracking1</SensorID>
+
+			<!--	Parameters that apply to the sensor -->
+			<Parameters>
+			
+				<!--	The following feature descriptor types are available: 
+						"regular", "upright", "gravity", "rectified". 
+						- The "regular" feature descriptor type is the most 
+						  general feature descriptor type and is used as 
+						  default if the tag is not specified. 
+						- The "upright" feature descriptor type assumes that 
+						  the camera is not rotated with respect to the optical 
+						  axis, i.e. is turned upside down, during the tracking 
+						  process. 
+						- The "gravity" feature descriptor type can only be 
+						  used with devices with inertial sensors which 
+						  measures gravity. It is used for localizing static 
+						  objects that provide (close to) vertical surfaces, 
+						  e.g. buildings or posters on a wall. The orientation 
+						  of the features will then be aligned with gravity. 
+						- The "rectified" feature descriptor type can only be 
+						  used with devices with inertial sensors which 
+						  measures gravity. It is used for planar objects on a 
+						  horizontal surface, e.g. a magazine on a table.
+						  This will improve the result of the localization of 
+						  planar objects under steep camera angles at the cost 
+						  of a lower framerate during localization.
+						This parameter is for expert usage only. In general it 
+						is advised to leave the value unchanged. -->
+				<FeatureDescriptorAlignment>regular</FeatureDescriptorAlignment>
+				
+				<!--	A restriction on the number of reference planar objects 
+						to be localized per frame. Localization takes longer 
+						than interframe tracking, and if the system tries to 
+						localize too many objects at the same time, it might 
+						cause a lower framerate. The default value for this is 5 
+						and is used if the tag is not specified.
+						Another name that can be used for this parameter is 
+						<MultipleReferenceImagesFast>. This name is however 
+						deprecated and should not be used any more. 
+						This parameter is for expert usage only. In general it 
+						is advised to leave the value unchanged. -->
+				<MaxObjectsToDetectPerFrame>5</MaxObjectsToDetectPerFrame>
+				
+				<!--	The maximum number of objects that should be tracked in 
+						parallel. Tracking many objects in parallel is quite 
+						expensive and might lead to a lower framerate. As soon 
+						as the maximum number of tracked objects is reached, 
+						the system will no longer try to localize new objects. 
+						The default value for this is 1 and is used if the tag 
+						is not specified. 
+						Another name that can be used for this parameter is 
+						<MaxNumCosesForInit>. This name is however deprecated 
+						and should not be used any more. 
+						This parameter is for expert usage only. In general it 
+						is advised to leave the value unchanged. -->
+				<MaxObjectsToTrackInParallel>1</MaxObjectsToTrackInParallel>
+
+				<!--	Default similarity threshold for specifying whether
+						template tracking was successful or failed. The 
+						tracking quality measure is defined between -1 and 1, 
+						where 1 is the best	possible value. If the tracking 
+						quality	is reported to be below the threshold, the 
+						tracker will treat the corresponding frame as lost. 
+						The default value for this is 0.7 and is used if the 
+						tag is not specified. This setting can be overridden 
+						for each "COS" if it is defined there. 
+						This parameter is for expert usage only. In general it 
+						is advised to leave the value unchanged. -->
+				<SimilarityThreshold>0.7</SimilarityThreshold>
+					
+			</Parameters>
+
+			<!--	Define a "SensorCOS" for this sensor. This is essentially a 
+					coordinate system associated with a template image that is 
+					to be tracked. -->
+			<SensorCOS>
+			
+				<!--	An ID that this COS is associated with. -->
+				<SensorCosID>Patch1</SensorCosID>
+				
+				<!--	Parameters that should be applied to this "SensorCOS". 
+						-->
+				<Parameters>
+
+					<!--	Reference image file name. If available, width and 
+							height of the tracking template in millimeters can
+							be specified by adding attributes "WidthMM" and/or 
+							"HeightMM". If these values are not specified at 
+							all, the width and height of the reference image in 
+							pixels will be used. If only width or heigth are 
+							specified, the missing quantity will be calculated 
+							such that sizes agree with the aspect ratio of the 
+							image. 
+							These parameters are not required and are intended 
+							for expert use only. -->
+					<ReferenceImage>myflashlab.png</ReferenceImage>
+					<!-- <ReferenceImage WidthMM="100" HeightMM="100">vlahzeha.png</ReferenceImage> -->
+
+					<!--	Another similarity threshold can be specified here. 
+							It will override the default similarity threshold 
+							specified for the sensor. 
+							This parameter is for expert usage only. In general 
+							it is advised to leave the value unchanged. -->
+					<SimilarityThreshold>0.5</SimilarityThreshold>
+
+				</Parameters>
+			</SensorCOS>
+
+			<!--	The commented lines below show how another COS can be 
+					added to the configuration. -->
+			
+			<!-- <SensorCOS>
+				<SensorCosID>Patch2</SensorCosID>
+				<Parameters>
+					<ReferenceImage>vid.png</ReferenceImage>
+					<SimilarityThreshold>0.5</SimilarityThreshold>
+				</Parameters>
+			</SensorCOS> -->
+			
+
+		</Sensor>
+	</Sensors>
+
+	<!--	Connections between SensorCOS and COS entities are defined here. 
+			While the SensorCOS represents the pose of the tracked object 
+			relative to the sensor, the COS is the pose that will be used when
+			augmenting objects. The COS is computed from the SensorCOS by 
+			performing additional processing steps: 
+			- A fuser can be used to smooth motion, and also to predict motion 
+			  in case of missing sensor readings. 
+			- A rigid transformation can be applied. The model to be augmented 
+			  can be shifted and rotated against a SensorCOS. 
+			- A hand-eye calibration can be applied. 
+			-->
+	<Connections>
+		<COS>
+
+			<!--	A descriptive name for this COS. -->
+			<Name>MarkerlessCOS1</Name>
+
+			<!--	Which type of Fuser to use. Here, we use the 
+					"SmoothingFuser", which applies smoothing in order to predict 
+					movement and handle noise. 
+					-->
+			<Fuser Type="SmoothingFuser">
+				<Parameters>
+					
+					<!--	Number of frames in which the tracker will continue 
+							predicting the pose when interframe tracking 
+							fails. After the specified number of frames, the 
+							tracker will stop predicting. 
+							This parameter is for expert usage only. In general 
+							it is advised to leave the value unchanged. -->
+					<KeepPoseForNumberOfFrames>2</KeepPoseForNumberOfFrames>
+					
+					<!--	If the tracking device is equipped with an inertial 
+							sensor that can measure gravity, the sensor's 
+							measurement is used to improve the pose 
+							estimate. To activate this option, the value of 
+							this tag must be set to "ReplaceZAxis". 
+							This parameter is for expert usage only. In general 
+							it is advised to leave the value unchanged. -->
+					<GravityAssistance></GravityAssistance>
+					
+					<!--	Data (position) smoothing factor for double 
+							exponential smoothing of translation. This value 
+							should be high if measures are expected to be 
+							accurate and low otherwise. A high value assigns a 
+							higher weight to a new measurement. Typically, the 
+							accuracy of translation estimates is rather 
+							high, so we set the smoothing factor to 0.8. The 
+							default value is 0.5. 
+							This parameter is for expert usage only. In general 
+							it is advised to leave the value unchanged. -->
+					<AlphaTranslation>1.0</AlphaTranslation>
+					
+					<!--	Trend (velocity) smoothing factor for double 
+							exponential smoothing of translation. This value 
+							should be high if measures are expected to be 
+							accurate and low otherwise. With the same 
+							reasoning as above, we set the smoothing factor to 
+							0.8. The default value is 0.5. 
+							This parameter is for expert usage only. In general 
+							it is advised to leave the value unchanged. -->
+					<GammaTranslation>1.0</GammaTranslation>
+
+					<!--	Data (position) smoothing factor for double 
+							exponential smoothing of rotation. Rotation 
+							measurements are typically not as accurate as 
+							translation measurements, so we use a value of 0.5.
+							This parameter is for expert usage only. In general 
+							it is advised to leave the value unchanged. -->
+					<AlphaRotation>0.8</AlphaRotation>
+	
+					<!--	Trend (velocity) smoothing factor for double 
+							exponential smoothing of rotation. With the same
+							reasoning as for AlphaRotation above, we set this 
+							value to 0.5. 
+							This parameter is for expert usage only. In general 
+							it is advised to leave the value unchanged. -->
+					<GammaRotation>0.8</GammaRotation>
+					
+					<!--	If an orientation sensor is available, the system
+							may try to keep updating the pose based on that 
+							orientation sensor's measurements. If this should
+							be done, then this option must be set to true. The 
+							default value is false. 
+							This parameter is for expert usage only. In general 
+							it is advised to leave the value unchanged. -->
+					<ContinueLostTrackingWithOrientationSensor>false</ContinueLostTrackingWithOrientationSensor>
+				</Parameters>
+			</Fuser>
+
+			<SensorSource>
+
+				<!--	The Sensor and SensorCOS that we want to use. Note 
+						that these IDs are the same that we have used in the 
+						Sensor definition above. -->
+				<SensorID>FeatureTracking1</SensorID>
+				<SensorCosID>Patch1</SensorCosID>
+
+				<!--	A hand-eye calibration allows to specify the relative 
+						pose between two sensors. In the simple case of having 
+						one camera-based sensor, it is usually not used. It 
+						allows to move the COS "as if" the camera were moved, 
+						and is thus inverse to the COSOffset rigid 
+						transformation that is specified below. -->
+				<HandEyeCalibration>
+				
+					<!--	The 3D translation vector. -->
+					<TranslationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</TranslationOffset>
+					
+					<!--	Rotations are specified via unit quaternions, where 
+							the imaginary parts "X", "Y", "Z" is specified 
+							first, and then the real part "W". --> 
+					<RotationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<W>1</W>
+					</RotationOffset>
+				</HandEyeCalibration>
+
+				<!--	The COSOffset specifies a rigid transformation that 
+						is applied to the SensorCOS. This makes it possible to
+						move the augmented model. It is specified just the same 
+						way as the hand-eye-calibration. -->
+				<COSOffset>
+					<TranslationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</TranslationOffset>
+					<RotationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<W>1</W>
+					</RotationOffset>
+				</COSOffset>
+			</SensorSource>
+		</COS>
+
+		<!--	The commented lines below show how another COS can be added to 
+				the configuration. This can be used together with the 
+				commented-out SensorCOS part in the Sensor definition above to 
+				create another COS. Note however that the robust tracker cannot
+				track multiple objects in parallel, it will always only track 
+				one of the defined objects at the same time. 
+				-->
+		
+		<!-- <COS>
+			<Name>MarkerlessCOS2</Name>
+			<Fuser Type="BestQualityFuser">
+				<Parameters>
+					<KeepPoseForNumberOfFrames>2</KeepPoseForNumberOfFrames>
+					<GravityAssistance></GravityAssistance>
+					<AlphaTranslation>1</AlphaTranslation>
+					<GammaTranslation>1</GammaTranslation>
+					<AlphaRotation>0.8</AlphaRotation>
+					<GammaRotation>0.8</GammaRotation>
+					<ContinueLostTrackingWithOrientationSensor>false</ContinueLostTrackingWithOrientationSensor>
+				</Parameters>
+			</Fuser>
+
+			<SensorSource>
+				<SensorID>FeatureTracking1</SensorID>
+				<SensorCosID>Patch2</SensorCosID>
+				<HandEyeCalibration>
+					<TranslationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</TranslationOffset>
+					<RotationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<W>1</W>
+					</RotationOffset>
+				</HandEyeCalibration>
+				<COSOffset>
+					<TranslationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</TranslationOffset>
+					<RotationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<W>1</W>
+					</RotationOffset>
+				</COSOffset>
+			</SensorSource>
+		</COS> -->
+		
+
+	</Connections>
+</TrackingData>
