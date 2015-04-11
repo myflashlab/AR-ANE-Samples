@@ -1,4 +1,4 @@
-# AR-ANE-SampleMarkerless3DAnimation
+# AR-ANE-Samples
 MyAR is an augmented reality Air Native Extension supporting Android and iOS 64-bit based on Metaio's SDK which gives you full power over your AR content through AREL. http://www.metaio.com/
 
 check out this video to see how it looks: https://www.youtube.com/watch?v=2j6HLW1CzzM
