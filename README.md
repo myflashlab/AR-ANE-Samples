@@ -6,7 +6,8 @@ you may also run the demo .apk in your device to see it in action: https://githu
 for more information, read "ReadMe.pdf" 
 
 # Sample videos: 
-SampleMarkerless3DAnimation.as = https://www.youtube.com/watch?v=2j6HLW1CzzM
+SampleMarkerless3DAnimation.as =	https://www.youtube.com/watch?v=2j6HLW1CzzM
+SampleMarkerlessVideoPlayback.as =	https://www.youtube.com/watch?v=bY1YwXFT4t4
 
 # AS3 API:
 
