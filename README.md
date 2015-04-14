@@ -8,6 +8,7 @@ for more information, read "ReadMe.pdf"
 # Sample videos: 
 SampleMarkerless3DAnimation.as =	https://www.youtube.com/watch?v=2j6HLW1CzzM
 SampleMarkerlessVideoPlayback.as =	https://www.youtube.com/watch?v=bY1YwXFT4t4
+SampleLocationBased.as =			coming soon...
 
 # AS3 API:
 
