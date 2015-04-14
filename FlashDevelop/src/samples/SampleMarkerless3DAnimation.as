@@ -168,7 +168,8 @@ package samples {
 			_ex.addEventListener(MyAREvent.COMMUNICATION, onCommunication);
 			_ex.addEventListener(MyAREvent.STATUS, onStatus);
 			
-			C.log("is Supported = ", _ex.isSupported());
+			var isSupported:Boolean = _ex.isSupported(); // isSupported() method MUST be always called after initializing the extension
+			C.log("is Supported = ", isSupported);
 			
 			var src:File = File.applicationDirectory.resolvePath("SampleMarkerless3DAnimation");
 			var dis:File = File.documentsDirectory.resolvePath("MyAR/SampleMarkerless3DAnimation");

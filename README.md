@@ -20,7 +20,8 @@ SampleMarkerlessVideoPlayback.as =	https://www.youtube.com/watch?v=bY1YwXFT4t4
      _ex.addEventListener(MyAREvent.COMMUNICATION, onCommunication); // A listener to listen to messages coming from AREL side
      _ex.addEventListener(MyAREvent.STATUS, onStatus); // A listener to know about the AR status: MyAR.AR_STARTED / MyAR.AR_FINISHED
      
-     trace("is Supported = ", _ex.isSupported());
+	 var isSupported:Boolean = _ex.isSupported(); // the isSupported() method must always be called after initializing the extension
+     trace("is Supported = ", isSupported);
      
      _ex.startAR("/METAIO_AR_ANE_demo/AREL_FILES/index.xml", true); // returns false if the file is not found
      // _ex.finishAR(); // call this method to close the AR camera and return back to flash
