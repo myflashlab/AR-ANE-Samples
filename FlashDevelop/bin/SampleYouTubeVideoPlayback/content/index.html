@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="../arel/arel.js"></script>
+		<script type="text/javascript" src="Assets/config.js"></script>
+		<script type="text/javascript" src="Assets/logic.js"></script>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<title>myappsnippet.com Video Sample</title>
+		
+		<style>
+			.x {
+				background: url('Assets/x.png') no-repeat top left;
+				display: block;
+				position: absolute;
+				width: 32px;
+				height: 32px;
+				top: 10px;
+				right: 10px;
+			}
+			
+			.download-box-visible {
+				background-color: rgba(0, 0, 0, .7);
+				display: block;
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				border-radius: 10px;
+				bottom: 10px;
+				right: 10px;
+				
+				color: #fff;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.8em;
+				text-align: center;
+				line-height: 105px;
+			}
+			
+			.download-box-invisible {
+				background-color: transparent;
+				display: none;
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<div><a class="x" onClick="closeCam()"></a></div>
+	<div id="download-box" class="download-box-invisible"></div>
+	
+	</body>
+</html>
