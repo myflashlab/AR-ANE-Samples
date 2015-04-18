@@ -10,6 +10,7 @@ SampleMarkerless3DAnimation.as =	https://www.youtube.com/watch?v=2j6HLW1CzzM
 SampleMarkerlessVideoPlayback.as =	https://www.youtube.com/watch?v=bY1YwXFT4t4
 SampleLocationBased.as =			https://www.youtube.com/watch?v=XAZr6UxjY_s
 Sample360View.as = 					https://www.youtube.com/watch?v=N-S1oQSkuNg
+SampleYouTubeVideoPlayback.as = 	https://github.com/myflashlab/AS3-youtube-parser-video-link/
 
 # AS3 API:
 
