@@ -14,37 +14,39 @@ SampleLocationBased.as =			https://www.youtube.com/watch?v=XAZr6UxjY_s
 SampleYouTubeVideoPlayback.as = 	https://github.com/myflashlab/AS3-youtube-parser-video-link/
 Sample360View.as = 					https://www.youtube.com/watch?v=N-S1oQSkuNg
 
+![MyAR ANE](http://myappsnippet.com/wp-content/uploads/2014/12/augmented-reality-adobe-air-extension_preview.jpg)
+
 # AS3 API:
 ```actionscript
-     import com.doitflash.air.extensions.AR.MyAR;
-     import com.doitflash.air.extensions.AR.MyAREvent;
-     
-     var _ex:MyAR = new MyAR();
-     _ex.stage = stage;
-     _ex.fixAirSDKOrientsBug(stage.autoOrients); // this is a bug on iOS 64-bit only. we must wait for adobe to give a final solution. calling this method is just a workaround so the app won't break when returning from AR in iOS devices.
-     _ex.addEventListener(MyAREvent.COMMUNICATION, onCommunication); // A listener to listen to messages coming from AREL side
-     _ex.addEventListener(MyAREvent.STATUS, onStatus); // A listener to know about the AR status: MyAR.AR_STARTED / MyAR.AR_FINISHED
-     
-	 var isSupported:Boolean = _ex.isSupported(); // the isSupported() method must always be called after initializing the extension
-     trace("is Supported = ", isSupported);
-     
-     _ex.startAR("/METAIO_AR_ANE_demo/AREL_FILES/index.xml", true); // returns false if the file is not found
-     // _ex.finishAR(); // call this method to close the AR camera and return back to flash
-     
-     function onCommunication(e:MyAREvent):void
-     {
-         // send a message from AREL to flash like: arel.Media.openWebsite("flash://MY_MESSAGE_FROM_JS")
-         trace("message from AREL = " + e.param);
-         
-         // on the AREL side, you may wish to open a URL in device's browser. for this reason, call:
-         // arel.Media.openWebsite("http://www.myappsnippet.com/")
-         
-         // you can also call functions on the AREL side from flash, like this:
-         _ex.toAREL("javascript:myjavascriptfunc('param 1 from Flash!', 'param 2 from Flash!')"); // myjavascriptfunc is a function you may create on the AREL side
-     }
-     
-     function onStatus(e:MyAREvent):void
-     {
-         trace("AR Status = " + e.param);
-     }
+import com.doitflash.air.extensions.AR.MyAR;
+import com.doitflash.air.extensions.AR.MyAREvent;
+
+var _ex:MyAR = new MyAR();
+_ex.stage = stage;
+_ex.fixAirSDKOrientsBug(stage.autoOrients); // this is a bug on iOS 64-bit only. we must wait for adobe to give a final solution. calling this method is just a workaround so the app won't break when returning from AR in iOS devices.
+_ex.addEventListener(MyAREvent.COMMUNICATION, onCommunication); // A listener to listen to messages coming from AREL side
+_ex.addEventListener(MyAREvent.STATUS, onStatus); // A listener to know about the AR status: MyAR.AR_STARTED / MyAR.AR_FINISHED
+
+var isSupported:Boolean = _ex.isSupported(); // the isSupported() method must always be called after initializing the extension
+trace("is Supported = ", isSupported);
+
+_ex.startAR("/METAIO_AR_ANE_demo/AREL_FILES/index.xml", true); // returns false if the file is not found
+// _ex.finishAR(); // call this method to close the AR camera and return back to flash
+
+function onCommunication(e:MyAREvent):void
+{
+	// send a message from AREL to flash like: arel.Media.openWebsite("flash://MY_MESSAGE_FROM_JS")
+	trace("message from AREL = " + e.param);
+	
+	// on the AREL side, you may wish to open a URL in device's browser. for this reason, call:
+	// arel.Media.openWebsite("http://www.myappsnippet.com/")
+	
+	// you can also call functions on the AREL side from flash, like this:
+	_ex.toAREL("javascript:myjavascriptfunc('param 1 from Flash!', 'param 2 from Flash!')"); // myjavascriptfunc is a function you may create on the AREL side
+}
+
+function onStatus(e:MyAREvent):void
+{
+	trace("AR Status = " + e.param);
+}
 ```
