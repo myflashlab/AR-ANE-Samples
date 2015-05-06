@@ -1,0 +1,12 @@
+* {
+	-webkit-highlight: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	/* -webkit-text-size-adjust: 100%; */
+	background-color: transparent
+}
