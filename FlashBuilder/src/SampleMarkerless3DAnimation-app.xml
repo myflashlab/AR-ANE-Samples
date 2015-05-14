@@ -110,5 +110,6 @@
   </initialWindow>
   <extensions>
     <extensionID>com.doitflash.air.extensions.ar</extensionID>
+    <extensionID>com.doitflash.air.extensions.dependency</extensionID>
   </extensions>
 </application>

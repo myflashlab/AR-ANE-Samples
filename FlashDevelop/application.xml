@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/16.0">
+<application xmlns="http://ns.adobe.com/air/application/15.0">
   <id>com.doitflash.exAR</id>
-  <versionNumber>3.0</versionNumber>
+  <versionNumber>3.2</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exAR</filename>
-  <name>AR 3.0</name>
+  <name>MyAR</name>
   <android>
     <manifestAdditions>
 		<![CDATA[<manifest android:installLocation="auto">
@@ -54,7 +54,7 @@
 			<activity 	android:name="com.doitflash.ar.ARELViewActivity" 
 						android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" 
 						android:theme="@style/Theme.FullScreen" />
-						
+			
 			<meta-data android:name="MetaioLicenseString" android:value="d2Zd0H/H5juW9CQ+DYUJXpCWPXzm3MqHhEparJCJkQo=" />
 			
 		</application>
@@ -113,5 +113,6 @@
   </icon>
   <extensions>
     <extensionID>com.doitflash.air.extensions.ar</extensionID>
+	<extensionID>com.doitflash.air.extensions.dependency</extensionID>
   </extensions>
 </application>

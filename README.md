@@ -5,7 +5,9 @@ you may also run the demo .apk in your device to see it in action: https://githu
 
 for more information, read "ReadMe.pdf" 
 
-**NOTICE: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.**
+**NOTICE 1: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.**
+
+**NOTICE 2: from V3.2 and above MyAR ane is using commonDependencies.ane so you need to download and add it to your project. https://github.com/myflashlab/common-dependencies-ANE**
 
 # Sample videos: 
 SampleMarkerless3DAnimation.as =	https://www.youtube.com/watch?v=2j6HLW1CzzM

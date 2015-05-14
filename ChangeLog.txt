@@ -6,3 +6,4 @@ MyAR Adobe Air Native Extension
 2014		>> V2.0:	This version was never release and we shifted the extension core to be based on MetaioSDK
 Mar 15, 2015 	>> V3.0: 	supporting AREL based on MetaioSDK V6.0.2 with android and iOS 64-bit
 Apr 15, 2015 	>> V3.1: 	added support for location based billboards in AREL
+May 14, 2015 	>> V3.2: 	fixed ANE conflicts with other ANEs must add commonDependencies.ane to your project https://github.com/myflashlab/common-dependencies-ANE
