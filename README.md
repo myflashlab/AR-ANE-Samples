@@ -1,6 +1,6 @@
 # AR-ANE-Samples
 
-Apple has acquired Metaio and the Metaio AR SDK is no longer available and in result of that, purchase of our AR ANE is no longer available. we are investigating the alternatives and soon will update this page. [read here for more information](http://myappsnippet.com/ar-sdk-ane-poll/)
+###Apple has acquired Metaio and the Metaio AR SDK is no longer available and in result of that, purchase of our AR ANE is no longer available. we are investigating the alternatives and soon will update this page. [read here for more information](http://myappsnippet.com/ar-sdk-ane-poll/)
 
 
 
