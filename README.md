@@ -1,4 +1,9 @@
 # AR-ANE-Samples
+
+Apple has acquired Metaio and the Metaio AR SDK is no longer available and in result of that, purchase of our AR ANE is no longer available. we are investigating the alternatives and soon will update this page. [read here for more information](http://myappsnippet.com/ar-sdk-ane-poll/)
+
+
+
 MyAR is an augmented reality Air Native Extension supporting Android and iOS 64-bit based on Metaio's SDK which gives you full power over your AR content through AREL. http://www.metaio.com/
 
 you may also run the demo .apk in your device to see it in action: https://github.com/myflashlab/AR-ANE-SampleMarkerless3DAnimation/raw/master/FlashDevelop/dist/exAR-captive-runtime.apk
