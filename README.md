@@ -1,6 +1,6 @@
 # AR-ANE-Samples
 
-###Apple has acquired Metaio and the Metaio AR SDK is no longer available and in result of that, purchase of our AR ANE is no longer available. we are investigating the alternatives and soon will update this page. [read here for more information](http://myappsnippet.com/ar-sdk-ane-poll/)
+###July 9 , 2015 Update: Wikitude will be releasing their new SDK V5 at July 21 and our AdobeAir extension will be built on it, fresh! it’s too early to say but we are hoping to have the ANE released by mid-August. we will update you more soon. [read here for more information](http://myappsnippet.com/ar-sdk-ane-poll/)
 
 
 
