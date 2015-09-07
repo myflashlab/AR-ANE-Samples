@@ -8,11 +8,11 @@
     <movie fps="30" />
     <movie width="480" />
     <movie height="762" />
-    <movie version="14" />
+    <movie version="17" />
     <movie minorVersion="0" />
     <movie platform="AIR Mobile" />
     <movie background="#FFFFFF" />
-    <movie preferredSDK="Flex 4.6.0, AIR 17.0;4.6.0, 17.0;" />
+    <movie preferredSDK="Flex 4.6.0, AIR 18.0;4.6.0, 18.0;" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
@@ -43,7 +43,7 @@
     <option linkReport="" />
     <option loadExterns="" />
     <option staticLinkRSL="True" />
-    <option additional="-swf-version=25" />
+    <option additional="-swf-version=29" />
     <option compilerConstants="" />
     <option minorVersion="" />
   </build>
@@ -61,6 +61,7 @@
     <element path="lib\openCV.ane" />
     <element path="lib\ar.ane" />
     <element path="lib\commonDependencies.ane" />
+    <element path="lib\speechExtensions.ane" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
@@ -80,7 +81,7 @@
   </library>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
-    <compile path="src\samples\SampleVisualSearch.as" />
+    <compile path="src\MainFinal.as" />
   </compileTargets>
   <!-- Paths to exclude from the Project Explorer tree -->
   <hiddenPaths>
