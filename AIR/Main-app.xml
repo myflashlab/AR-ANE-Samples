@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/27.0">
+  <id>com.doitflash.ar</id>
+  <versionNumber>0.0.0</versionNumber>
+  <supportedProfiles>mobileDevice</supportedProfiles>
+  <filename>exAr</filename>
+  <name>exAr</name>
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto">
+	
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Tell the system this app requires OpenGL ES 2.0. -->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+    <!-- rear facing cam -->
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
+    <!-- users location -->
+    <uses-feature android:name="android.hardware.location" android:required="true" />
+
+    <!-- accelerometer -->
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+
+    <!-- compass -->
+    <uses-feature android:name="android.hardware.sensor.compass" android:required="true" />
+
+    <!-- do not support small resolution screens -->
+    <supports-screens
+        android:smallScreens="false" android:largeScreens="true"
+        android:normalScreens="true" android:anyDensity="true"
+        android:xlargeScreens="true" />
+	
+	<!--The new Permission thing on Android works ONLY if you are targetting Android SDK 23 or higher-->
+	<uses-sdk android:targetSdkVersion="23"/>
+	
+	<application>
+		
+		<activity>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+		<activity
+            android:name="com.myflashlabs.ar.MyArchitectView"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <activity android:name="com.wikitude.architect.BrowserActivity" />
+        <activity
+            android:name="com.wikitude.tools.activities.MediaPlayerActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+		
+		
+	</application>
+</manifest>]]></manifestAdditions>
+  </android>
+	
+  <iPhone>
+    <!--https://developer.apple.com/library/ios/documentation/general/reference/infoplistkeyreference/Articles/iPhoneOSKeys.html-->
+    <!--http://help.adobe.com/en_US/air/build/WSfffb011ac560372f7e64a7f12cd2dd1867-8000.html-->
+	  
+	 <InfoAdditions><![CDATA[
+	
+		<!--iOS 9.0 or higher can support this ANE-->
+		<key>MinimumOSVersion</key>
+		<string>9.0</string>
+		 
+		<key>UIPrerenderedIcon</key>
+		<true/>
+			
+		<key>UIStatusBarStyle</key>
+		<string>UIStatusBarStyleBlackOpaque</string>
+			
+		<key>UIRequiresPersistentWiFi</key>
+		<string>NO</string>
+	
+		<key>UIDeviceFamily</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+		</array>
+		
+		<key>NSLocationWhenInUseUsageDescription</key>
+		<string>Access to your Geo Data is needed to diplay augmented reality images on your screen.</string>
+		
+		<key>NSCameraUsageDescription</key>
+		<string>Access to the camera is needed to display augmented reality content on top of your camera image.</string>
+		
+	]]></InfoAdditions>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+	  
+  </iPhone>
+	
+	
+  <initialWindow>
+    <title>exAr</title>
+    <content>Main.swf</content>
+    <visible>true</visible>
+    <fullScreen>true</fullScreen>
+    <autoOrients>true</autoOrients>
+    <!--<aspectRatio>portrait</aspectRatio>-->
+    <renderMode>gpu</renderMode>
+    <!--<depthAndStencil>true</depthAndStencil>-->
+    <!-- required for 3D -->
+    <systemChrome>standard</systemChrome>
+  </initialWindow>
+    <icon>
+        <image16x16>icons/icon_16.png</image16x16>
+        <image29x29>icons/icon_29.png</image29x29>
+        <image32x32>icons/icon_32.png</image32x32>
+        <image36x36>icons/icon_36.png</image36x36>
+        <image40x40>icons/icon_40.png</image40x40>
+        <image48x48>icons/icon_48.png</image48x48>
+        <image50x50>icons/icon_50.png</image50x50>
+        <image57x57>icons/icon_57.png</image57x57>
+        <image58x58>icons/icon_58.png</image58x58>
+        <image60x60>icons/icon_60.png</image60x60>
+        <image72x72>icons/icon_72.png</image72x72>
+        <image76x76>icons/icon_76.png</image76x76>
+        <image80x80>icons/icon_80.png</image80x80>
+        <image96x96>icons/icon_96.png</image96x96>
+        <image100x100>icons/icon_100.png</image100x100>
+        <image114x114>icons/icon_114.png</image114x114>
+        <image120x120>icons/icon_120.png</image120x120>
+        <image128x128>icons/icon_128.png</image128x128>
+        <image144x144>icons/icon_144.png</image144x144>
+        <image152x152>icons/icon_152.png</image152x152>
+        <image512x512>icons/icon_512.png</image512x512>
+        <image1024x1024>icons/icon_1024.png</image1024x1024>
+    </icon>
+  <extensions>
+
+      <extensionID>com.myflashlab.air.extensions.ar</extensionID>
+      <extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
+
+      <!-- download the dependency ANEs from https://github.com/myflashlab/common-dependencies-ANE -->
+      <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
+      <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
+	
+  </extensions>
+</application>

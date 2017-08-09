@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="AIR">
+    <configurations>
+      <configuration name="AIR" target-platform="Mobile" pure-as="true" main-class="Demo" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/AIR">
+        <dependencies target-player="25.0">
+          <entries>
+            <entry library-id="1c696a4b-410d-456b-b23a-cc85708819de">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIR-27.beta" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="true" />
+          </map>
+          <option name="additionalOptions" value="-swf-version=38" />
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="Main">
+          <files-to-package>
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/icons" path-in-package="icons" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/architect.js" path-in-package="architect.js" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/exit.png" path-in-package="exit.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/sdk_logo-1.png" path-in-package="sdk_logo-1.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/wikitude_icon.png" path-in-package="wikitude_icon.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_1_ImageOnTarget" path-in-package="01_ImageTracking_1_ImageOnTarget" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_2_DifferentTargets" path-in-package="01_ImageTracking_2_DifferentTargets" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_3_Interactivity" path-in-package="01_ImageTracking_3_Interactivity" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_4_HtmlDrawable" path-in-package="01_ImageTracking_4_HtmlDrawable" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_5_Bonus-Sparkles" path-in-package="01_ImageTracking_5_Bonus-Sparkles" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/02_AdvancedImageTracking_1_Gestures" path-in-package="02_AdvancedImageTracking_1_Gestures" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/02_AdvancedImageTracking_2_DistanceToTarget" path-in-package="02_AdvancedImageTracking_2_DistanceToTarget" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/02_AdvancedImageTracking_3_ExtendedTracking" path-in-package="02_AdvancedImageTracking_3_ExtendedTracking" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/03_MultipleTargets_1_MultipleTargets" path-in-package="03_MultipleTargets_1_MultipleTargets" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/03_MultipleTargets_2_DistanceBetweenTargets" path-in-package="03_MultipleTargets_2_DistanceBetweenTargets" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/03_MultipleTargets_3_TransformationBetweenTargets" path-in-package="03_MultipleTargets_3_TransformationBetweenTargets" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/04_CloudRecognition_1_SingleImageRecognition" path-in-package="04_CloudRecognition_1_SingleImageRecognition" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/04_CloudRecognition_2_ContinuousImageRecognition" path-in-package="04_CloudRecognition_2_ContinuousImageRecognition" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/04_CloudRecognition_3_UsingMetainformationInTheResponse" path-in-package="04_CloudRecognition_3_UsingMetainformationInTheResponse" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/05_InstantTracking_1_SimpleInstantTracking" path-in-package="05_InstantTracking_1_SimpleInstantTracking" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/05_InstantTracking_2_3dModelOnPlane" path-in-package="05_InstantTracking_2_3dModelOnPlane" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/05_InstantTracking_3_Interactivity" path-in-package="05_InstantTracking_3_Interactivity" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/05_InstantTracking_4_SceneInteraction" path-in-package="05_InstantTracking_4_SceneInteraction" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/06_ObjectTracking_1_BasicObjectTracking" path-in-package="06_ObjectTracking_1_BasicObjectTracking" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/06_ObjectTracking_2_2dImageAndSoundAugmentations" path-in-package="06_ObjectTracking_2_2dImageAndSoundAugmentations" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/06_ObjectTracking_3_Animated3dAugmentations" path-in-package="06_ObjectTracking_3_Animated3dAugmentations" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_1_3dModelOnTarget" path-in-package="07_3dModels_1_3dModelOnTarget" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_2_AppearingAnimation" path-in-package="07_3dModels_2_AppearingAnimation" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_3_Interactivity" path-in-package="07_3dModels_3_Interactivity" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_4_SnapToScreen" path-in-package="07_3dModels_4_SnapToScreen" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_5_AnimatedModelParts" path-in-package="07_3dModels_5_AnimatedModelParts" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_6_3dModelAtGeoLocation" path-in-package="07_3dModels_6_3dModelAtGeoLocation" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/08_PointOfInterest_1_PoiAtLocation" path-in-package="08_PointOfInterest_1_PoiAtLocation" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/08_PointOfInterest_2_PoiWithLabel" path-in-package="08_PointOfInterest_2_PoiWithLabel" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/08_PointOfInterest_3_MultiplePois" path-in-package="08_PointOfInterest_3_MultiplePois" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/08_PointOfInterest_4_SelectingPois" path-in-package="08_PointOfInterest_4_SelectingPois" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/09_ObtainPoiData_1_FromApplicationModel" path-in-package="09_ObtainPoiData_1_FromApplicationModel" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/09_ObtainPoiData_2_FromLocalResource" path-in-package="09_ObtainPoiData_2_FromLocalResource" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/09_ObtainPoiData_3_FromWebservice" path-in-package="09_ObtainPoiData_3_FromWebservice" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_1_PresentingDetails" path-in-package="10_BrowsingPois_1_PresentingDetails" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_2_AddingRadar" path-in-package="10_BrowsingPois_2_AddingRadar" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_3_LimitingRange" path-in-package="10_BrowsingPois_3_LimitingRange" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_4_ReloadingContent" path-in-package="10_BrowsingPois_4_ReloadingContent" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_5_NativeDetailScreen" path-in-package="10_BrowsingPois_5_NativeDetailScreen" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_6_Bonus-CaptureScreen" path-in-package="10_BrowsingPois_6_Bonus-CaptureScreen" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_1_SimpleVideo" path-in-package="11_Video_1_SimpleVideo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_2_PlaybackStates" path-in-package="11_Video_2_PlaybackStates" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_3_SnappingVideo" path-in-package="11_Video_3_SnappingVideo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_4_Bonus-TransparentVideo" path-in-package="11_Video_4_Bonus-TransparentVideo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_1_FrontCamera" path-in-package="12_HardwareControl_1_FrontCamera" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_2_CameraSwitching" path-in-package="12_HardwareControl_2_CameraSwitching" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_3_AdvancedFeatures" path-in-package="12_HardwareControl_3_AdvancedFeatures" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_1_2dTrackingAndGeo" path-in-package="x_Demo_1_2dTrackingAndGeo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_2_SolarSystem(Geo)" path-in-package="x_Demo_2_SolarSystem(Geo)" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_3_SolarSystem(2dTracking)" path-in-package="x_Demo_3_SolarSystem(2dTracking)" />
+          </files-to-package>
+          <AirSigningOptions keystore-path="$MODULE_DIR$/cert/myflashlabs.p12" use-temp-certificate="false" />
+        </packaging-android>
+        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="Main">
+          <files-to-package>
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/icons" path-in-package="icons" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/Frameworks" path-in-package="Frameworks" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/exit.png" path-in-package="exit.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-375w-667h@2x~iphone.png" path-in-package="Default-375w-667h@2x~iphone.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-414w-736h@3x~iphone.png" path-in-package="Default-414w-736h@3x~iphone.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-568h@2x~iphone.png" path-in-package="Default-568h@2x~iphone.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-Landscape-414w-736h@3x~iphone.png" path-in-package="Default-Landscape-414w-736h@3x~iphone.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-Landscape~ipad.png" path-in-package="Default-Landscape~ipad.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-LandscapeLeft@2x~ipad.png" path-in-package="Default-LandscapeLeft@2x~ipad.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-LandscapeRight@2x~ipad.png" path-in-package="Default-LandscapeRight@2x~ipad.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-LandscapeRight~ipad.png" path-in-package="Default-LandscapeRight~ipad.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-Landscapet@2x~ipad.png" path-in-package="Default-Landscapet@2x~ipad.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-Portrait@2x~ipad.png" path-in-package="Default-Portrait@2x~ipad.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-Portrait~ipad.png" path-in-package="Default-Portrait~ipad.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-PortraitUpsideDown@2x~ipad.png" path-in-package="Default-PortraitUpsideDown@2x~ipad.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default-PortraitUpsideDown~ipad.png" path-in-package="Default-PortraitUpsideDown~ipad.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default@2x~iphone.png" path-in-package="Default@2x~iphone.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons/Default~iphone.png" path-in-package="Default~iphone.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_1_ImageOnTarget" path-in-package="01_ImageTracking_1_ImageOnTarget" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_2_DifferentTargets" path-in-package="01_ImageTracking_2_DifferentTargets" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_3_Interactivity" path-in-package="01_ImageTracking_3_Interactivity" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_4_HtmlDrawable" path-in-package="01_ImageTracking_4_HtmlDrawable" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_5_Bonus-Sparkles" path-in-package="01_ImageTracking_5_Bonus-Sparkles" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/02_AdvancedImageTracking_1_Gestures" path-in-package="02_AdvancedImageTracking_1_Gestures" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/02_AdvancedImageTracking_2_DistanceToTarget" path-in-package="02_AdvancedImageTracking_2_DistanceToTarget" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/02_AdvancedImageTracking_3_ExtendedTracking" path-in-package="02_AdvancedImageTracking_3_ExtendedTracking" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/03_MultipleTargets_1_MultipleTargets" path-in-package="03_MultipleTargets_1_MultipleTargets" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/03_MultipleTargets_2_DistanceBetweenTargets" path-in-package="03_MultipleTargets_2_DistanceBetweenTargets" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/03_MultipleTargets_3_TransformationBetweenTargets" path-in-package="03_MultipleTargets_3_TransformationBetweenTargets" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/04_CloudRecognition_1_SingleImageRecognition" path-in-package="04_CloudRecognition_1_SingleImageRecognition" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/04_CloudRecognition_2_ContinuousImageRecognition" path-in-package="04_CloudRecognition_2_ContinuousImageRecognition" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/04_CloudRecognition_3_UsingMetainformationInTheResponse" path-in-package="04_CloudRecognition_3_UsingMetainformationInTheResponse" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/05_InstantTracking_1_SimpleInstantTracking" path-in-package="05_InstantTracking_1_SimpleInstantTracking" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/05_InstantTracking_2_3dModelOnPlane" path-in-package="05_InstantTracking_2_3dModelOnPlane" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/05_InstantTracking_3_Interactivity" path-in-package="05_InstantTracking_3_Interactivity" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/05_InstantTracking_4_SceneInteraction" path-in-package="05_InstantTracking_4_SceneInteraction" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/06_ObjectTracking_1_BasicObjectTracking" path-in-package="06_ObjectTracking_1_BasicObjectTracking" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/06_ObjectTracking_2_2dImageAndSoundAugmentations" path-in-package="06_ObjectTracking_2_2dImageAndSoundAugmentations" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/06_ObjectTracking_3_Animated3dAugmentations" path-in-package="06_ObjectTracking_3_Animated3dAugmentations" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_1_3dModelOnTarget" path-in-package="07_3dModels_1_3dModelOnTarget" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_2_AppearingAnimation" path-in-package="07_3dModels_2_AppearingAnimation" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_3_Interactivity" path-in-package="07_3dModels_3_Interactivity" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_4_SnapToScreen" path-in-package="07_3dModels_4_SnapToScreen" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_5_AnimatedModelParts" path-in-package="07_3dModels_5_AnimatedModelParts" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/07_3dModels_6_3dModelAtGeoLocation" path-in-package="07_3dModels_6_3dModelAtGeoLocation" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/08_PointOfInterest_1_PoiAtLocation" path-in-package="08_PointOfInterest_1_PoiAtLocation" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/08_PointOfInterest_2_PoiWithLabel" path-in-package="08_PointOfInterest_2_PoiWithLabel" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/08_PointOfInterest_3_MultiplePois" path-in-package="08_PointOfInterest_3_MultiplePois" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/08_PointOfInterest_4_SelectingPois" path-in-package="08_PointOfInterest_4_SelectingPois" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/09_ObtainPoiData_1_FromApplicationModel" path-in-package="09_ObtainPoiData_1_FromApplicationModel" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/09_ObtainPoiData_2_FromLocalResource" path-in-package="09_ObtainPoiData_2_FromLocalResource" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/09_ObtainPoiData_3_FromWebservice" path-in-package="09_ObtainPoiData_3_FromWebservice" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_1_PresentingDetails" path-in-package="10_BrowsingPois_1_PresentingDetails" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_2_AddingRadar" path-in-package="10_BrowsingPois_2_AddingRadar" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_3_LimitingRange" path-in-package="10_BrowsingPois_3_LimitingRange" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_4_ReloadingContent" path-in-package="10_BrowsingPois_4_ReloadingContent" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_5_NativeDetailScreen" path-in-package="10_BrowsingPois_5_NativeDetailScreen" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/10_BrowsingPois_6_Bonus-CaptureScreen" path-in-package="10_BrowsingPois_6_Bonus-CaptureScreen" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_1_SimpleVideo" path-in-package="11_Video_1_SimpleVideo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_2_PlaybackStates" path-in-package="11_Video_2_PlaybackStates" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_3_SnappingVideo" path-in-package="11_Video_3_SnappingVideo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_4_Bonus-TransparentVideo" path-in-package="11_Video_4_Bonus-TransparentVideo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_1_FrontCamera" path-in-package="12_HardwareControl_1_FrontCamera" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_2_CameraSwitching" path-in-package="12_HardwareControl_2_CameraSwitching" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_3_AdvancedFeatures" path-in-package="12_HardwareControl_3_AdvancedFeatures" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_1_2dTrackingAndGeo" path-in-package="x_Demo_1_2dTrackingAndGeo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_2_SolarSystem(Geo)" path-in-package="x_Demo_2_SolarSystem(Geo)" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_3_SolarSystem(2dTracking)" path-in-package="x_Demo_3_SolarSystem(2dTracking)" />
+          </files-to-package>
+          <AirSigningOptions keystore-path="$MODULE_DIR$/cert/dev.p12" provisioning-profile-path="$MODULE_DIR$/cert/comDoitflash.mobileprovision" />
+        </packaging-ios>
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="AIR-27.beta" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="lib" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="1c696a4b-410d-456b-b23a-cc85708819de" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+      </library>
+    </orderEntry>
+  </component>
+</module>
