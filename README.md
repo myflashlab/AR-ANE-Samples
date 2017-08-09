@@ -21,6 +21,10 @@ You can find the latest ANE version here: https://drive.google.com/drive/folders
 
 In this repository you can find a sample intelliJ project which has all the necessary settings and configuration. Feel free to run the project and see the Augmented Reality samples in action.
 
+# Sample AR Targets
+
+While running the sample AIR project, you will need some targets to initiate the AR experience. You can download these sample targets from [this page](http://www.wikitude.com/external/doc/documentation/latest/unity/targetimages.html#target-images).
+
 # Requirements 
 
 1. Android API 19+
