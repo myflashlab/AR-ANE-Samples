@@ -1,3 +1,9 @@
+[![Augmented Reality ANE Kickstarter Campaign](http://www.myflashlabs.com/wp-content/uploads/2015/11/myflashlabs-AR-ane_rewards.jpg)](http://kck.st/2uIZkUE)
+
+[Click here](http://kck.st/2uIZkUE) to view the **Augmented Reality AIR Native Extension for the Wikitude SDK** Kickstarter campaign.
+
+---
+
 # Augmented Reality ANE V7.0.0-0.0.0 for Android+iOS
 
 This ANE is built on Wikitude SDK and allows you to create Augmented Reality in your apps without knowing any 3D engine programming. You can create complex AR scenes using HTML/JS only.
@@ -25,7 +31,7 @@ In this repository you can find a sample intelliJ project which has all the nece
 
 While running the sample AIR project, you will need some targets to initiate the AR experience. You can download these sample targets from [this page](http://www.wikitude.com/external/doc/documentation/latest/unity/targetimages.html#target-images).
 
-# Requirements 
+# Requirements
 
 1. Android API 19+
 2. iOS SDK 9.0+
