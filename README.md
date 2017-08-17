@@ -4,7 +4,7 @@
 
 ---
 
-# Augmented Reality ANE V7.0.0-0.0.0 for Android+iOS
+# Augmented Reality ANE V7.0.0-0.0.1 for Android+iOS
 
 This ANE is built on Wikitude SDK and allows you to create Augmented Reality in your apps without knowing any 3D engine programming. You can create complex AR scenes using HTML/JS only.
 
@@ -54,6 +54,11 @@ Here's an example of how the coupon works: If the ANE price is $x and the Wikitu
 Similar to all our other ANEs, our dev team is ready to help you with any questions you might have about the ANE side of this project. Any question regarding how the ANE should be implemented in your AIR projects can be asked here in the [issues section](https://github.com/myflashlab/AR-ANE-Samples/issues). However,  any question regarding how the AR works in action is considered the Wikitude's area of support.
 
 # Changelog
+
+*Aug 17, 2017 - V7.0.0-0.0.1*
+
+* Fixed blackscreen problem.
+* Added calibration listeners. ```ArEvents.CALIBRATION_NEEDED```, ```ArEvents.CALIBRATION_DONE```.
 
 *Aug 09, 2017 - V7.0.0-0.0.0*
 

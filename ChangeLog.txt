@@ -1,5 +1,9 @@
 MyAR Adobe Air Native Extension
 
+*Aug 17, 2017 - V7.0.0-0.0.1*
+* Fixed blackscreen problem.
+* Added calibration listeners. ```ArEvents.CALIBRATION_NEEDED```, ```ArEvents.CALIBRATION_DONE```.
+
 *Aug 09, 2017 - V7.0.0-0.0.0*
 * rebuilt the ANE from scratch with Wikitude SDK 7.0.0 including Android+iOS support.
 

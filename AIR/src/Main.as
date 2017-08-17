@@ -119,6 +119,8 @@ public class Main extends Sprite
 		
 		AR.listener.addEventListener(ArEvents.WORLD_LOAD_RESULT, onWorldLoadResult);
 		AR.listener.addEventListener(ArEvents.NATIVE_WINDOW_CLOSED, onArClosed);
+		AR.listener.addEventListener(ArEvents.CALIBRATION_NEEDED, onCalibrationNeeded);
+		AR.listener.addEventListener(ArEvents.CALIBRATION_DONE, onCalibrationDone);
 		
 		var features:Array = [];
 		features.push(Features.GEO);
@@ -177,14 +179,24 @@ public class Main extends Sprite
 				return;
 			}
 			
-			// location request on iOS happens inside the AR ANE. you don't need to ask for it before running the AR
-			if(AR.os == AR.IOS || _permissionANE.check(PermissionCheck.SOURCE_LOCATION) == PermissionCheck.PERMISSION_GRANTED)
+			if(AR.os == AR.ANDROID && _permissionANE.check(PermissionCheck.SOURCE_LOCATION) == PermissionCheck.PERMISSION_GRANTED)
+			{
+				onLocationRequestResult(PermissionCheck.PERMISSION_GRANTED);
+			}
+			else if(AR.os == AR.IOS && _permissionANE.check(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE) == PermissionCheck.PERMISSION_GRANTED)
 			{
 				onLocationRequestResult(PermissionCheck.PERMISSION_GRANTED);
 			}
 			else
 			{
-				_permissionANE.request(PermissionCheck.SOURCE_LOCATION, onLocationRequestResult);
+				if(AR.os == AR.ANDROID)
+				{
+					_permissionANE.request(PermissionCheck.SOURCE_LOCATION, onLocationRequestResult);
+				}
+				else if(AR.os == AR.IOS)
+				{
+					_permissionANE.request(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE, onLocationRequestResult);
+				}
 			}
 		}
 		
@@ -374,6 +386,16 @@ public class Main extends Sprite
 	private function onArClosed(e:ArEvents):void
 	{
 		trace("AR closed");
+	}
+	
+	private function onCalibrationNeeded(e:ArEvents):void
+	{
+		trace("onCalibrationNeeded");
+	}
+	
+	private function onCalibrationDone(e:ArEvents):void
+	{
+		trace("onCalibrationDone");
 	}
 }
 }
