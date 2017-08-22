@@ -48,6 +48,13 @@ var World = {
             	alert(errorMessage);
             }
 		});
+		
+		// Add the close button's listener
+		document.getElementById('close').addEventListener('click', function(e) {
+			AR.platform.sendJSONObject({
+				action: "close_ar"
+			});
+		});
 	},
 
 	removeLoadingBar: function() {
