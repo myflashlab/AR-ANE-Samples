@@ -121,6 +121,7 @@ public class Main extends Sprite
 		AR.listener.addEventListener(ArEvents.NATIVE_WINDOW_CLOSED, onArClosed);
 		AR.listener.addEventListener(ArEvents.CALIBRATION_NEEDED, onCalibrationNeeded);
 		AR.listener.addEventListener(ArEvents.CALIBRATION_DONE, onCalibrationDone);
+		AR.listener.addEventListener(ArEvents.JS_TALK, onJsTalk);
 		
 		var features:Array = [];
 		features.push(Features.GEO);
@@ -396,6 +397,22 @@ public class Main extends Sprite
 	private function onCalibrationDone(e:ArEvents):void
 	{
 		trace("onCalibrationDone");
+	}
+	
+	private function onJsTalk(e:ArEvents):void
+	{
+		trace("onJsTalk: " + e.msg);
+		
+		// you may call functions on the js side using the AR.callJS method.
+//		AR.callJS("remoteJSfunction('value1', 'value2')");
+		
+		// The best practice is to send a json string from js to AIR
+		var obj:Object = JSON.parse(e.msg);
+		
+		if(obj.action == "close_ar")
+		{
+			AR.endAR();
+		}
 	}
 }
 }
