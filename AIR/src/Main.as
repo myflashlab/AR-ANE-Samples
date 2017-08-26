@@ -122,13 +122,13 @@ public class Main extends Sprite
 		AR.listener.addEventListener(ArEvents.CALIBRATION_NEEDED, onCalibrationNeeded);
 		AR.listener.addEventListener(ArEvents.CALIBRATION_DONE, onCalibrationDone);
 		AR.listener.addEventListener(ArEvents.JS_TALK, onJsTalk);
+		AR.listener.addEventListener(ArEvents.SCREENSHOT_RESULT, onScreenshotresult);
 		
 		var features:Array = [];
 		features.push(Features.GEO);
 		features.push(Features.IMAGE_TRACKING);
 		features.push(Features.INSTANT_TRACKING);
 		features.push(Features.OBJECT_TRACKING);
-		if(AR.os == AR.IOS) features.push(Features.SCREENSHOT_IMPORT);
 		
 		AR.checkFeatureSupport(features, onCheckResult);
 		
@@ -287,6 +287,10 @@ public class Main extends Sprite
 		
 		trace("launching AR, please wait...");
 		
+		_arSettings.camFocusMode = CameraFocusMode.CONTINUOUS;
+		_arSettings.camPosition = CameraPosition.BACK;
+		_arSettings.camResolution = CameraResolution.SD_640x480;
+		
 		// for best performance, you must activated only the AR features which you will use.
 		_arSettings.hasGeo = true;
 		_arSettings.hasInstant = true;
@@ -296,16 +300,22 @@ public class Main extends Sprite
 		if(AR.os == AR.ANDROID)
 		{
 			// Android specific settings
+			_arSettings.android.cam2Enabled = false;
 			_arSettings.android.fullscreenMode = true;
+			_arSettings.android.camFocusDistanceAndroid = 1;
 		}
 		else if(AR.os == AR.IOS)
 		{
 			// iOS specific settings
+			_arSettings.ios.camFocusDistance = -1.0;
+			_arSettings.ios.camFocusRange = FocusRange.NONE;
+			_arSettings.ios.framerate = 30;
+			_arSettings.ios.excludeBinnedVideo = true;
 			
-			// you should create a close button in your html view.
-			// This property will be removed in the final release.
-			// We have put it here for the iOS side only so you can close the AR camera easily.
-			_arSettings.btnExit = File.applicationDirectory.resolvePath("exit.png");
+			// you should create a close button in your html view. (check sample 01_ImageTracking_1_ImageOnTarget)
+			// This property is only used for demo reasons. We have put it here for the iOS side only so you can
+			// close the AR camera easily.
+			_arSettings.btnExit = File.applicationDirectory.resolvePath("exit.png"); // does not do anything on Android
 		}
 		
 		AR.config(_arSettings);
@@ -412,6 +422,25 @@ public class Main extends Sprite
 		if(obj.action == "close_ar")
 		{
 			AR.endAR();
+		}
+		else if(obj.action == "capture_screen")
+		{
+			AR.captureScreen(
+					Screenshot.CAPTURE_MODE_CAM,
+					"test2.png" // relative path to File.applicationStorageDirectory
+			);
+		}
+	}
+	
+	private function onScreenshotresult(e:ArEvents):void
+	{
+		if(e.status == AR.RESULT_OK)
+		{
+			trace("screenshot success", e.screenshot.nativePath + " = " + e.screenshot.size);
+		}
+		else if(e.status == AR.RESULT_ERROR)
+		{
+			trace("screenshot failed reason: " + e.msg);
 		}
 	}
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/27.0">
   <id>com.doitflash.ar</id>
-  <versionNumber>0.0.2</versionNumber>
+  <versionNumber>1.0.0</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exAr</filename>
   <name>exAr</name>

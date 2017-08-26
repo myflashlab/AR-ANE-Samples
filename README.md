@@ -4,7 +4,7 @@
 
 ---
 
-# Augmented Reality ANE V7.0.0-0.0.2 for Android+iOS
+# Augmented Reality ANE V7.0.0-1.0.0 for Android+iOS
 
 This ANE is built on Wikitude SDK and allows you to create Augmented Reality in your apps without knowing any 3D engine programming. You can create complex AR scenes using HTML/JS only.
 
@@ -21,7 +21,7 @@ In this repository, you will find all the necessary information about how to imp
 
 # Download The ANE
 
-You can find the latest ANE version here: https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing
+You can find the latest **demo** ANE and sample .apk file from here: https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing
 
 **Note:** The size of the ANE is huge! This does NOT mean that your final app build would be that large. ANEs include different build archs but when you compile your app, only the required archs will be compiled into your final app. That said, the AR ANE is still the biggest ANE we have ever built, byte-size wise talking.
 
@@ -55,9 +55,14 @@ Here's an example of how the coupon works: If the ANE price is $x and the Wikitu
 
 # Support
 
-Similar to all our other ANEs, our dev team is ready to help you with any questions you might have about the ANE side of this project. Any question regarding how the ANE should be implemented in your AIR projects can be asked here in the [issues section](https://github.com/myflashlab/AR-ANE-Samples/issues). However,  any question regarding how the AR works in action is considered the Wikitude's area of support.
+Similar to all our other ANEs, our dev team is ready to help you with any questions you might have about the ANE side of this project. Any question regarding how the ANE should be implemented in your AIR projects can be asked here in the [issues section](https://github.com/myflashlab/AR-ANE-Samples/issues). However,  any question regarding how the AR works in action is considered the [Wikitude's area of support](https://support.wikitude.com/support/home).
 
 # Changelog
+
+*Aug 26, 2017 - V7.0.0-1.0.0*
+
+* Added AR screenshot support
+* Added camera hardware settings
 
 *Aug 22, 2017 - V7.0.0-0.0.2*
 
