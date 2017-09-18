@@ -16,6 +16,15 @@
     <uses-permission android:name="android.permission.ACCESS_GPS" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <!--
+        required if you are copying AR assets to your sdcard.
+        Video files in Android MUST be copied to sdcard or they won't be played.
+        This is a bug from Adobe and you can check its status here:
+        https://github.com/Gamua/Adobe-Runtime-Support/issues/12
+        https://tracker.adobe.com/#/view/AIR-4198415
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <!-- Tell the system this app requires OpenGL ES 2.0. -->
     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 

@@ -29,6 +29,8 @@ package
 	import com.myflashlab.air.extensions.nativePermissions.PermissionCheck;
 	import com.myflashlab.air.extensions.ar.*;
 
+import flash.utils.setTimeout;
+
 /**
  * ...
  * @author Hadi Tavakoli - 8/8/17 9:42 AM
@@ -40,14 +42,15 @@ public class Main extends Sprite
 	private var _list:List;
 	private var _scroll:Scroller;
 	
+	private var txt:TextField;
+	
 	private var _permissionANE:PermissionCheck = new PermissionCheck();
 	private var _arSupported:Boolean;
 	private var _arSettings:Config = new Config();
 	
 	private var _samples:Array = [
 			"01_ImageTracking_1_ImageOnTarget",
-			"01_ImageTracking_0_VideoPlayback",
-			"01_ImageTracking_2_DifferentTargets",
+		 	"01_ImageTracking_2_DifferentTargets",
 			"01_ImageTracking_3_Interactivity",
 			"01_ImageTracking_4_HtmlDrawable",
 			"01_ImageTracking_5_Bonus-Sparkles",
@@ -90,6 +93,7 @@ public class Main extends Sprite
 			"11_Video_2_PlaybackStates",
 			"11_Video_3_SnappingVideo",
 			"11_Video_4_Bonus-TransparentVideo",
+			"11_Video_5_VideoPlayback",
 			"12_HardwareControl_1_FrontCamera",
 			"12_HardwareControl_2_CameraSwitching",
 			"12_HardwareControl_3_AdvancedFeatures",
@@ -209,10 +213,88 @@ public class Main extends Sprite
 				return;
 			}
 			
+			if(AR.os == AR.ANDROID)
+			{
+				if(_permissionANE.check(PermissionCheck.SOURCE_STORAGE) == PermissionCheck.PERMISSION_GRANTED)
+				{
+					onStorageRequestResult(PermissionCheck.PERMISSION_GRANTED);
+				}
+				else
+				{
+					_permissionANE.request(PermissionCheck.SOURCE_STORAGE, onStorageRequestResult);
+				}
+			}
+			else
+			{
+				trace("Cheers, All permissions are allowed for AR to work correctly.");
+				
+				init();
+				onResize();
+			}
+		}
+		
+		function onStorageRequestResult($state:int):void
+		{
+			if($state != PermissionCheck.PERMISSION_GRANTED)
+			{
+				trace("AR ANE needs Location access to work properly");
+				return;
+			}
+			
 			trace("Cheers, All permissions are allowed for AR to work correctly.");
 			
-			init();
-			onResize();
+			txt = new TextField();
+			txt.autoSize = TextFieldAutoSize.LEFT;
+			txt.antiAliasType = AntiAliasType.ADVANCED;
+			txt.defaultTextFormat = new TextFormat("Arimo", 21);
+			txt.multiline = true;
+			txt.wordWrap = true;
+			txt.htmlText = "PLEASE WAIT A FEW SECONDS TILL WE COPY THE ASSETS TO YOUR SDCARD.<br><br>THIS HAPPENS ONLY FOR THE FIRST TIME.<br><br>YOU SHOULD DO BETTER IN YOUR APP. THIS IS ONLY FOR A DEMO :)";
+			addChild(txt);
+			
+			txt.width = 400;
+			txt.x = 10
+			txt.y = 10;
+			
+			setTimeout(copyAssets, 500);
+		}
+	}
+	
+	private function copyAssets():void
+	{
+		/*
+		 	Video files in Android MUST be copied to sdcard or they won't be played.
+		 	This is a bug from Adobe and you can check its status here:
+		 	https://github.com/Gamua/Adobe-Runtime-Support/issues/12
+		 	https://tracker.adobe.com/#/view/AIR-4198415
+		 */
+		
+		copyAsset("11_Video_1_SimpleVideo");
+		copyAsset("11_Video_2_PlaybackStates");
+		copyAsset("11_Video_3_SnappingVideo");
+		copyAsset("11_Video_4_Bonus-TransparentVideo");
+		copyAsset("11_Video_5_VideoPlayback");
+		
+		removeChild(txt);
+		init();
+		onResize();
+		
+		function copyAsset($path:String):void
+		{
+			var assetsDestination:File = File.documentsDirectory.resolvePath("wikitude/"+$path+"/");
+			var assetsSource:File = File.applicationDirectory.resolvePath($path);
+			
+			if(!assetsDestination.exists) assetsSource.copyTo(assetsDestination);
+			
+			// change the path to make sure it's reading it from documentsDirectory instead of applicationDirectory
+			for(var i:int=0; i < _samples.length; i++)
+			{
+				if(_samples[i] == $path)
+				{
+					_samples[i] = assetsDestination.url;
+					break;
+				}
+			}
 		}
 	}
 	
