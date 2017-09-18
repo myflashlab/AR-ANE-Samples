@@ -31,7 +31,7 @@ In this repository you can find a sample intelliJ project which has all the nece
 
 # Sample AR Targets
 
-While running the sample AIR project, you will need some targets to initiate the AR experience. You can download these sample targets from [this page](http://www.wikitude.com/external/doc/documentation/latest/unity/targetimages.html#target-images).
+While running the sample AIR project, you will need some targets to initiate the AR experience. You can download these sample targets from [this page](https://www.wikitude.com/external/doc/documentation/latest/ios/targetimages.html#target-images). Some of the samples provided by Myflashlabs may have different image targets. grab them from [here](https://github.com/myflashlab/AR-ANE-Samples/tree/master/targets).
 
 # Requirements
 
