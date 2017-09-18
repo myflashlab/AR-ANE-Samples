@@ -1,0 +1,52 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+
+
+
+.hidden {
+	display: none;
+}
+
+.info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 12px;
+	background-color: #eee;
+	font-size: large;
+	text-align: center;
+	opacity: .8;
+}
+
+.info img {
+	display: inline-block;
+	width: 90px;
+	height: auto;
+	margin: 4px;
+}
+
+
+
+
+.close {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+}
+
+.close img {
+	width: 32px;
+	height: auto;
+}

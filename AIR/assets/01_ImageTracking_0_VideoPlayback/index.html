@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes" name="viewport">
+
+  <title></title>
+
+  <script src="https://www.wikitude.com/libs/architect.js"></script>
+  <script type="text/javascript" src="../ade.js"></script>
+
+  <link rel="stylesheet" href="css/default.css">
+</head>
+
+<body>
+  <div class="close">
+    <a id="close" href="#"><img src="assets/btn_close.png" alt="Close"></a>
+	</div>
+
+  <div id="loading" class="info">Loading ...</div>
+
+  <div id="targets" class="info hidden">
+    <p>To begin, scan one of the following targets:</p>
+    <div>
+      <img src="assets/marker_h_01.jpg" alt="Marker 01">
+      <img src="assets/marker_h_02.jpg" alt="Marker 02">
+    </div>
+  </div>
+
+  <script src="js/videoplayer.js"></script>
+
+  <script>
+  window.onload = function() {
+    // The Wikitude's JavaScript API comes equipped with a logging console that
+    // is shared by the system and the developer. The logging console creates a
+    // button at the bottom of the screen, allowing the developer to open the
+    // debug console. On start up of each world, the library creates a singleton
+    // `AR.logger` instance, which can be used by the developer to log messages.
+    // E.g. `AR.logger.debug('msg');`.
+
+    // Uncomment the below line to enable the logging console.
+    // AR.logger.setHTMLLoggingEnabled(true);
+  }
+  </script>
+</body>
+</html>

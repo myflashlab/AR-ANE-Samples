@@ -28,7 +28,6 @@ package
 	import com.myflashlab.air.extensions.dependency.OverrideAir;
 	import com.myflashlab.air.extensions.nativePermissions.PermissionCheck;
 	import com.myflashlab.air.extensions.ar.*;
-	
 
 /**
  * ...
@@ -47,6 +46,7 @@ public class Main extends Sprite
 	
 	private var _samples:Array = [
 			"01_ImageTracking_1_ImageOnTarget",
+			"01_ImageTracking_0_VideoPlayback",
 			"01_ImageTracking_2_DifferentTargets",
 			"01_ImageTracking_3_Interactivity",
 			"01_ImageTracking_4_HtmlDrawable",

@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="AIR">
     <configurations>
-      <configuration name="AIR" target-platform="Mobile" pure-as="true" main-class="Demo" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/AIR">
+      <configuration name="AIR" target-platform="Mobile" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/AIR">
         <dependencies target-player="25.0">
           <entries>
             <entry library-id="1c696a4b-410d-456b-b23a-cc85708819de">
@@ -75,6 +75,7 @@
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_1_2dTrackingAndGeo" path-in-package="x_Demo_1_2dTrackingAndGeo" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_2_SolarSystem(Geo)" path-in-package="x_Demo_2_SolarSystem(Geo)" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_3_SolarSystem(2dTracking)" path-in-package="x_Demo_3_SolarSystem(2dTracking)" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_0_VideoPlayback" path-in-package="01_ImageTracking_0_VideoPlayback" />
           </files-to-package>
           <AirSigningOptions keystore-path="$MODULE_DIR$/cert/myflashlabs.p12" use-temp-certificate="false" />
         </packaging-android>
@@ -148,6 +149,7 @@
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_1_2dTrackingAndGeo" path-in-package="x_Demo_1_2dTrackingAndGeo" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_2_SolarSystem(Geo)" path-in-package="x_Demo_2_SolarSystem(Geo)" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_3_SolarSystem(2dTracking)" path-in-package="x_Demo_3_SolarSystem(2dTracking)" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_0_VideoPlayback" path-in-package="01_ImageTracking_0_VideoPlayback" />
           </files-to-package>
           <AirSigningOptions keystore-path="$MODULE_DIR$/cert/dev.p12" provisioning-profile-path="$MODULE_DIR$/cert/comDoitflash.mobileprovision" />
         </packaging-ios>
