@@ -48,7 +48,7 @@ var World = {
 		// Read more here: https://www.wikitude.com/external/doc/documentation/latest/android/workingwithvideos.html#supported-video-codecs
 		//
 		// NOTE: As with all resources the video can be loaded locally from the
-		// application bundle (like this example) or remotely from any server.
+		// SD Card (like this example) or remotely from any server.
 		var video = new AR.VideoDrawable('assets/myflashlabs.mp4', .4, {
 			zOrder: 1,
 			translate: { y: playBtn.translate.y },
