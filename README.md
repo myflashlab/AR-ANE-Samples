@@ -1,9 +1,3 @@
-[![Augmented Reality ANE Kickstarter Campaign](http://www.myflashlabs.com/wp-content/uploads/2015/11/myflashlabs-AR-ane_rewards.jpg)](http://kck.st/2uIZkUE)
-
-[Click here](http://kck.st/2uIZkUE) to view the **Augmented Reality AIR Native Extension for the Wikitude SDK** Kickstarter campaign.
-
----
-
 # Augmented Reality ANE V7.0.0-1.0.0 for Android+iOS
 
 This ANE is built on Wikitude SDK and allows you to create Augmented Reality in your apps without knowing any 3D engine programming. You can create complex AR scenes using HTML/JS only.
@@ -42,8 +36,9 @@ While running the sample AIR project, you will need some targets to initiate the
 5. To compile on iOS, you will need to create a folder named ```Frameworks``` at the root of your project and copy the [WikitudeSDK.framework V7.0.0](https://cdn.wikitude.com/sdk/7_0_0/WikitudeSDK_iOS_7-0-0_2017-07-12_18-00-55.zip) file to this folder and make sure it is packaged in your iOS build. (it must be included in your project, just like any resources). Moreover, You need to open "WikitudeSDK.framework" and delete the folder "_CodeSignature" so the AIR SDK can correctly sign the framework for you.
 
 # Commercial Version
-
 http://www.myflashlabs.com/product/augmented-reality-ane-adobe-air-native-extension/
+
+![Augmented Reality ANE](http://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-augmented-reality-595x738.jpg)
 
 **IMPORTANT: After purchasing the commercial version of the ANE from Myflashlabs store, you will receive a discount coupon from Wikitude. You can use that coupon to purchase Wikitude license.**
 
