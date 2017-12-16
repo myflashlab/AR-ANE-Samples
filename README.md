@@ -1,4 +1,4 @@
-# Augmented Reality ANE V7.0.0-1.0.0 for Android+iOS
+# Augmented Reality ANE V7.0.0-1.0.2 for Android+iOS
 
 This ANE is built on Wikitude SDK and allows you to create Augmented Reality in your apps without knowing any 3D engine programming. You can create complex AR scenes using HTML/JS only.
 
@@ -15,7 +15,7 @@ In this repository, you will find all the necessary information about how to imp
 
 # Download The ANE
 
-You can find the latest **demo** ANE and sample .apk file from here: https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing
+You have access to the [demo ANE](https://www.myflashlabs.com/anelab/ar102.ane) and [sample .apk file](https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing)
 
 **Note:** The size of the ANE is huge! This does NOT mean that your final app build would be that large. ANEs include different build archs but when you compile your app, only the required archs will be compiled into your final app. That said, the AR ANE is still the biggest ANE we have ever built, byte-size wise talking.
 
@@ -54,54 +54,46 @@ Similar to all our other ANEs, our dev team is ready to help you with any questi
 
 # Changelog
 
-*Aug 26, 2017 - V7.0.0-1.0.0*
+*Dec 15, 2017 - V7.0.0-1.0.2*
+* Optimized to be used with the [ANE-LAB software](https://github.com/myflashlab/ANE-LAB/).
+* Make sure you are using the latest version of dependencies.
 
+*Aug 26, 2017 - V7.0.0-1.0.0*
 * Added AR screenshot support
 * Added camera hardware settings
 
 *Aug 22, 2017 - V7.0.0-0.0.2*
-
 * Added support for JS/AIR and vice versa communication. listen to ```ArEvents.JS_TALK``` for messages from JS and use ```AR.callJS("")``` to call functions on the JS side.
 * The first sample, **01_ImageTracking_1_ImageOnTarget** shows how you can have a close button on the JS side to close the AR window when clicked.
 
 
 *Aug 17, 2017 - V7.0.0-0.0.1*
-
 * Fixed blackscreen problem.
 * Added calibration listeners. ```ArEvents.CALIBRATION_NEEDED```, ```ArEvents.CALIBRATION_DONE```.
 
 *Aug 09, 2017 - V7.0.0-0.0.0*
-
 * Rebuilt the ANE from scratch with Wikitude SDK 7.0.0 including Android+iOS support.
 
 *Sep 07, 2015 - V5.0.0*
-
 * Added Wikitude SDK for Android
 
 *Jun 01, 2015 - V4.0.0*
-
 * This version was never release because apple bought Metaio! and we shifted the extension core to be based on Wikitude
 
 *May 14, 2015 - V3.2.0*
-
 * fixed ANE conflicts with other ANEs must add commonDependencies.ane to your project https://github.com/myflashlab/common-dependencies-ANE
 
 *Apr 15, 2015 - V3.1.0*
-
 * added support for location based billboards in AREL
 
 *Mar 15, 2015 - V3.0.0*
-
 * supporting AREL based on MetaioSDK V6.0.2 with android and iOS 64-bit
 
 *Dec 15, 2014 - V2.0.0*
-
 * This version was never release and we shifted the extension core to be based on MetaioSDK
 
 *Apr 23, 2014 - V1.6.0*
-
 * Added support for iOS 32-bit
 
 *Feb 05, 2014 - V1.0.0*
-
 * beginning of the journey supporting Android only

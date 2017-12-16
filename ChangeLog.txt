@@ -1,5 +1,9 @@
 MyAR Adobe Air Native Extension
 
+*Dec 15, 2017 - V7.0.0-1.0.2*
+* Optimized to be used with the [ANE-LAB software](https://github.com/myflashlab/ANE-LAB/).
+* Make sure you are using the latest version of dependencies.
+
 *Aug 26, 2017 - V7.0.0-1.0.0*
 
 * Added AR screenshot support

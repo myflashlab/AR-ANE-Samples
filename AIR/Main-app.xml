@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/27.0">
   <id>com.doitflash.ar</id>
-  <versionNumber>1.0.0</versionNumber>
+  <versionNumber>1.0.2</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exAr</filename>
   <name>exAr</name>
@@ -71,8 +71,7 @@
         <activity android:name="com.wikitude.architect.BrowserActivity" />
         <activity
             android:name="com.wikitude.tools.activities.MediaPlayerActivity"
-            android:screenOrientation="landscape" >
-        </activity>
+            android:screenOrientation="landscape"/>
 		
 		
 	</application>
@@ -105,7 +104,7 @@
 		</array>
 		
 		<key>NSLocationWhenInUseUsageDescription</key>
-		<string>Access to your Geo Data is needed to diplay augmented reality images on your screen.</string>
+		<string>Access to your Geo Data is needed to display augmented reality images on your screen.</string>
 		
 		<key>NSCameraUsageDescription</key>
 		<string>Access to the camera is needed to display augmented reality content on top of your camera image.</string>
