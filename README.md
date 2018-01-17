@@ -46,8 +46,6 @@ Here's an example of how the coupon works: If the ANE price is $x and the Wikitu
 
 **Notice:** to get the wikitude coupon, you need to get the ANE commercial version first.
 
-![Augmented Reality ANE](http://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-augmented-reality-1-595x738.jpg)
-
 # Support
 
 Similar to all our other ANEs, our dev team is ready to help you with any questions you might have about the ANE side of this project. Any question regarding how the ANE should be implemented in your AIR projects can be asked here in the [issues section](https://github.com/myflashlab/AR-ANE-Samples/issues). However,  any question regarding how the AR works in action is considered the [Wikitude's area of support](https://support.wikitude.com/support/home).
