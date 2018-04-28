@@ -1,5 +1,15 @@
 MyAR Adobe Air Native Extension
 
+*Apr 28, 2018 - V7.2.1-1.1.0*
+* Updated to Wikitude SDK V7.2.1 which has updates for [Android 8 and iOS 11 latest features](https://www.wikitude.com/blog-sdk-support-ios-11-android-8/).
+* Use the new demo ANE: https://www.myflashlabs.com/anelab/ar110.ane
+* Update Android resources from [wikitude_res.zip](https://github.com/myflashlab/AR-ANE-Samples/blob/master/wikitude_res.zip)
+* Wikitude iOS uses dynamic frameworks. You need to download iOS [SDK V7.2.1 from here](https://github.com/myflashlab/AR-ANE-Samples/blob/master/Wikitude_iOS_SDK.zip) and add it to your project under a folder named exactly **"Frameworks"**. Then you must add the *Frameworks* folder to your project resources so the *WikitudeSDK.framework* will be added to your app final binary. If you're not sure how this should look like, checkout our [sample project setup](https://github.com/myflashlab/AR-ANE-Samples/tree/master/AIR).
+  - Unlike the old version of this ANE, you can't download the framework directly from Wikitude download page. Because AIR SDK 29 is not correctly striping the unncessary archs. You should use the version linked above. We have [notified Adobe about](#) this bug so they can fix it in future versions hopefully.
+  - You no longer need to open the .framework file to remove the codesignature folder.
+* Compile your project using AIR SDK 29+
+* Refer to [JS API documentation V7.2.1](https://www.wikitude.com/external/doc/documentation/7.2.1/Reference/JavaScript%20API/index.html)
+
 *Dec 15, 2017 - V7.0.0-1.0.2*
 * Optimized to be used with the [ANE-LAB software](https://github.com/myflashlab/ANE-LAB/).
 * Make sure you are using the latest version of dependencies.

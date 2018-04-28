@@ -9,7 +9,7 @@
               <dependency linkage="Merged" />
             </entry>
           </entries>
-          <sdk name="AIR-27.beta" />
+          <sdk name="AIR-29.122" />
         </dependencies>
         <compiler-options>
           <map>
@@ -69,13 +69,13 @@
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_2_PlaybackStates" path-in-package="11_Video_2_PlaybackStates" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_3_SnappingVideo" path-in-package="11_Video_3_SnappingVideo" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_4_Bonus-TransparentVideo" path-in-package="11_Video_4_Bonus-TransparentVideo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_5_VideoPlayback" path-in-package="11_Video_5_VideoPlayback" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_1_FrontCamera" path-in-package="12_HardwareControl_1_FrontCamera" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_2_CameraSwitching" path-in-package="12_HardwareControl_2_CameraSwitching" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_3_AdvancedFeatures" path-in-package="12_HardwareControl_3_AdvancedFeatures" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_1_2dTrackingAndGeo" path-in-package="x_Demo_1_2dTrackingAndGeo" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_2_SolarSystem(Geo)" path-in-package="x_Demo_2_SolarSystem(Geo)" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_3_SolarSystem(2dTracking)" path-in-package="x_Demo_3_SolarSystem(2dTracking)" />
-            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_0_VideoPlayback" path-in-package="01_ImageTracking_0_VideoPlayback" />
           </files-to-package>
           <AirSigningOptions keystore-path="$MODULE_DIR$/cert/myflashlabs.p12" use-temp-certificate="false" />
         </packaging-android>
@@ -143,13 +143,13 @@
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_2_PlaybackStates" path-in-package="11_Video_2_PlaybackStates" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_3_SnappingVideo" path-in-package="11_Video_3_SnappingVideo" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_4_Bonus-TransparentVideo" path-in-package="11_Video_4_Bonus-TransparentVideo" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/11_Video_5_VideoPlayback" path-in-package="11_Video_5_VideoPlayback" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_1_FrontCamera" path-in-package="12_HardwareControl_1_FrontCamera" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_2_CameraSwitching" path-in-package="12_HardwareControl_2_CameraSwitching" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/12_HardwareControl_3_AdvancedFeatures" path-in-package="12_HardwareControl_3_AdvancedFeatures" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_1_2dTrackingAndGeo" path-in-package="x_Demo_1_2dTrackingAndGeo" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_2_SolarSystem(Geo)" path-in-package="x_Demo_2_SolarSystem(Geo)" />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/x_Demo_3_SolarSystem(2dTracking)" path-in-package="x_Demo_3_SolarSystem(2dTracking)" />
-            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/01_ImageTracking_0_VideoPlayback" path-in-package="01_ImageTracking_0_VideoPlayback" />
           </files-to-package>
           <AirSigningOptions keystore-path="$MODULE_DIR$/cert/dev.p12" provisioning-profile-path="$MODULE_DIR$/cert/comDoitflash.mobileprovision" />
         </packaging-ios>
@@ -162,7 +162,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="AIR-27.beta" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="AIR-29.122" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="lib" level="project" />
     <orderEntry type="module-library" exported="">
