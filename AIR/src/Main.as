@@ -44,7 +44,6 @@ public class Main extends Sprite
 	
 	private var txt:TextField;
 	
-	private var _permissionANE:PermissionCheck = new PermissionCheck();
 	private var _arSupported:Boolean;
 	private var _arSettings:Config = new Config();
 	
@@ -167,47 +166,47 @@ public class Main extends Sprite
 	
 	private function checkPermissions():void
 	{
-		if(_permissionANE.check(PermissionCheck.SOURCE_CAMERA) == PermissionCheck.PERMISSION_GRANTED)
+		if(PermissionCheck.check(PermissionCheck.SOURCE_CAMERA) == PermissionCheck.PERMISSION_GRANTED)
 		{
-			onCameraRequestResult(PermissionCheck.PERMISSION_GRANTED);
+			onCameraRequestResult({state:PermissionCheck.PERMISSION_GRANTED});
 		}
 		else
 		{
-			_permissionANE.request(PermissionCheck.SOURCE_CAMERA, onCameraRequestResult);
+			PermissionCheck.request(PermissionCheck.SOURCE_CAMERA, onCameraRequestResult);
 		}
 		
-		function onCameraRequestResult($state:int):void
+		function onCameraRequestResult($obj:Object):void
 		{
-			if($state != PermissionCheck.PERMISSION_GRANTED)
+			if($obj.state != PermissionCheck.PERMISSION_GRANTED)
 			{
 				trace("AR ANE needs Camera access to work properly");
 				return;
 			}
 			
-			if(AR.os == AR.ANDROID && _permissionANE.check(PermissionCheck.SOURCE_LOCATION) == PermissionCheck.PERMISSION_GRANTED)
+			if(AR.os == AR.ANDROID && PermissionCheck.check(PermissionCheck.SOURCE_LOCATION) == PermissionCheck.PERMISSION_GRANTED)
 			{
-				onLocationRequestResult(PermissionCheck.PERMISSION_GRANTED);
+				onLocationRequestResult({state:PermissionCheck.PERMISSION_GRANTED});
 			}
-			else if(AR.os == AR.IOS && _permissionANE.check(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE) == PermissionCheck.PERMISSION_GRANTED)
+			else if(AR.os == AR.IOS && PermissionCheck.check(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE) == PermissionCheck.PERMISSION_GRANTED)
 			{
-				onLocationRequestResult(PermissionCheck.PERMISSION_GRANTED);
+				onLocationRequestResult({state:PermissionCheck.PERMISSION_GRANTED});
 			}
 			else
 			{
 				if(AR.os == AR.ANDROID)
 				{
-					_permissionANE.request(PermissionCheck.SOURCE_LOCATION, onLocationRequestResult);
+					PermissionCheck.request(PermissionCheck.SOURCE_LOCATION, onLocationRequestResult);
 				}
 				else if(AR.os == AR.IOS)
 				{
-					_permissionANE.request(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE, onLocationRequestResult);
+					PermissionCheck.request(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE, onLocationRequestResult);
 				}
 			}
 		}
 		
-		function onLocationRequestResult($state:int):void
+		function onLocationRequestResult($obj:Object):void
 		{
-			if($state != PermissionCheck.PERMISSION_GRANTED)
+			if($obj.state != PermissionCheck.PERMISSION_GRANTED)
 			{
 				trace("AR ANE needs Location access to work properly");
 				return;
@@ -215,13 +214,13 @@ public class Main extends Sprite
 			
 			if(AR.os == AR.ANDROID)
 			{
-				if(_permissionANE.check(PermissionCheck.SOURCE_STORAGE) == PermissionCheck.PERMISSION_GRANTED)
+				if(PermissionCheck.check(PermissionCheck.SOURCE_STORAGE) == PermissionCheck.PERMISSION_GRANTED)
 				{
-					onStorageRequestResult(PermissionCheck.PERMISSION_GRANTED);
+					onStorageRequestResult({state:PermissionCheck.PERMISSION_GRANTED});
 				}
 				else
 				{
-					_permissionANE.request(PermissionCheck.SOURCE_STORAGE, onStorageRequestResult);
+					PermissionCheck.request(PermissionCheck.SOURCE_STORAGE, onStorageRequestResult);
 				}
 			}
 			else
@@ -233,9 +232,9 @@ public class Main extends Sprite
 			}
 		}
 		
-		function onStorageRequestResult($state:int):void
+		function onStorageRequestResult($obj:Object):void
 		{
-			if($state != PermissionCheck.PERMISSION_GRANTED)
+			if($obj.state != PermissionCheck.PERMISSION_GRANTED)
 			{
 				trace("AR ANE needs Location access to work properly");
 				return;
@@ -253,7 +252,7 @@ public class Main extends Sprite
 			addChild(txt);
 			
 			txt.width = 400;
-			txt.x = 10
+			txt.x = 10;
 			txt.y = 10;
 			
 			setTimeout(copyAssets, 500);
@@ -399,6 +398,8 @@ public class Main extends Sprite
 			// close the AR camera easily.
 			_arSettings.btnExit = File.applicationDirectory.resolvePath("exit.png"); // does not do anything on Android
 		}
+		
+		trace("launchAR: "+ selectedItem.sample+"/index.html");
 		
 		AR.config(_arSettings);
 		AR.launchAR(selectedItem.sample+"/index.html");

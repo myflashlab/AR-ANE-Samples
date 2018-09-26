@@ -1,5 +1,9 @@
 MyAR Adobe Air Native Extension
 
+*Sep 21, 2018 - V7.2.1-1.1.1*
+* Removed AndroidSupport dependency
+* fixed [bug #16](https://github.com/myflashlab/AR-ANE-Samples/issues/16)
+
 *Apr 28, 2018 - V7.2.1-1.1.0*
 * Updated to Wikitude SDK V7.2.1 which has updates for [Android 8 and iOS 11 latest features](https://www.wikitude.com/blog-sdk-support-ios-11-android-8/).
 * Use the new demo ANE: https://www.myflashlabs.com/anelab/ar110.ane

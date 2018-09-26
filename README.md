@@ -1,4 +1,4 @@
-# Augmented Reality ANE V7.2.1-1.1.0 for Android+iOS
+# Augmented Reality ANE V7.2.1-1.1.1 for Android+iOS
 
 This ANE is built on Wikitude SDK and allows you to create Augmented Reality in your apps without knowing any 3D engine programming. You can create complex AR scenes using HTML/JS only.
 
@@ -15,7 +15,7 @@ In this repository, you will find all the necessary information about how to imp
 
 # Download The ANE
 
-You have access to the [demo ANE](https://www.myflashlabs.com/anelab/ar110.ane) and [sample .apk file](https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing)
+You have access to the [demo ANE](https://www.myflashlabs.com/anelab/ar111.ane) and [sample .apk file](https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing)
 
 **Note:** The size of the ANE is huge! This does NOT mean that your final app build would be that large. ANEs include different build archs but when you compile your app, only the required archs will be compiled into your final app. That said, the AR ANE is still the biggest ANE we have ever built, byte-size wise talking.
 
@@ -31,8 +31,8 @@ While running the sample AIR project, you will need some targets to initiate the
 
 1. Android API 19+
 2. iOS SDK 9.0+
-3. AIR SDK 29+
-4. This ANE is dependent on **[androidSupport.ane](https://github.com/myflashlab/common-dependencies-ANE/tree/master/androidSupport)**, **[overrideAir.ane](https://github.com/myflashlab/common-dependencies-ANE/tree/master/overridAir)** and **[permissionCheck.ane](https://github.com/myflashlab/PermissionCheck-ANE/tree/master/AIR/lib)**. You need to add these ANEs to your project too.
+3. AIR SDK 30+
+4. This ANE is dependent on **[overrideAir.ane](https://github.com/myflashlab/common-dependencies-ANE/tree/master/overridAir)** and **[permissionCheck.ane](https://github.com/myflashlab/PermissionCheck-ANE/tree/master/AIR/lib)**. You need to add these ANEs to your project too.
 5. To compile on iOS, you will need to create a folder named ```Frameworks``` at the root of your project and copy the [WikitudeSDK.framework V7.2.1](https://github.com/myflashlab/AR-ANE-Samples/blob/master/Wikitude_iOS_SDK.zip) file to this folder and make sure it is packaged in your iOS build. (it must be included in your project, just like any resources).
 
 # Commercial Version
@@ -50,6 +50,10 @@ Here's an example of how the coupon works: If the ANE price is $x and the Wikitu
 Similar to all our other ANEs, our dev team is ready to help you with any questions you might have about the ANE side of this project. Any question regarding how the ANE should be implemented in your AIR projects can be asked here in the [issues section](https://github.com/myflashlab/AR-ANE-Samples/issues). However,  any question regarding how the AR works in action is considered the [Wikitude's area of support](https://support.wikitude.com/support/home).
 
 # Changelog
+*Sep 21, 2018 - V7.2.1-1.1.1*
+* Removed AndroidSupport dependency
+* fixed [bug #16](https://github.com/myflashlab/AR-ANE-Samples/issues/16)
+
 *Apr 28, 2018 - V7.2.1-1.1.0*
 * Updated to Wikitude SDK V7.2.1 which has updates for [Android 8 and iOS 11 latest features](https://www.wikitude.com/blog-sdk-support-ios-11-android-8/).
 * Use the new demo ANE: https://www.myflashlabs.com/anelab/ar110.ane

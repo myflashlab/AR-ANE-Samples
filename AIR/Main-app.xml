@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/29.0">
+<application xmlns="http://ns.adobe.com/air/application/30.0">
   <id>com.doitflash.ar</id>
-  <versionNumber>1.1.0</versionNumber>
+  <versionNumber>1.1.1</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exAr</filename>
   <name>exAr</name>
   <android>
     <manifestAdditions><![CDATA[<manifest android:installLocation="auto">
-	
+
 	<uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -46,8 +46,7 @@
         android:normalScreens="true" android:anyDensity="true"
         android:xlargeScreens="true" />
 	
-	<!--The new Permission thing on Android works ONLY if you are targetting Android SDK 23 or higher-->
-	<uses-sdk android:targetSdkVersion="23"/>
+	<uses-sdk android:targetSdkVersion="26"/>
 	
 	<application>
 		
@@ -154,11 +153,14 @@
   <extensions>
 
       <extensionID>com.myflashlab.air.extensions.ar</extensionID>
+
+      <!-- needed for the AR to work properly -->
       <extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
 
-      <!-- download the dependency ANEs from https://github.com/myflashlab/common-dependencies-ANE -->
-      <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
+      <!-- Dependencies -->
+      <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.core</extensionID>
+      <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.v4</extensionID>
       <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
-	
+
   </extensions>
 </application>
