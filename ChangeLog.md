@@ -1,5 +1,9 @@
 MyAR Adobe Air Native Extension
 
+*Nov 16, 2018 - V7.2.1-1.1.4*
+* Works with OverrideAir ANE V5.6.1 or higher
+* Works with ANELAB V1.1.26 or higher
+
 *Sep 21, 2018 - V7.2.1-1.1.1*
 * Removed AndroidSupport dependency
 * fixed [bug #16](https://github.com/myflashlab/AR-ANE-Samples/issues/16)

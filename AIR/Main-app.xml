@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/30.0">
+<application xmlns="http://ns.adobe.com/air/application/31.0">
   <id>com.doitflash.ar</id>
-  <versionNumber>1.1.1</versionNumber>
+  <versionNumber>1.1.4</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exAr</filename>
   <name>exAr</name>
@@ -101,7 +101,7 @@
 			<string>1</string>
 			<string>2</string>
 		</array>
-		
+
 		<key>NSLocationWhenInUseUsageDescription</key>
 		<string>Access to your Geo Data is needed to display augmented reality images on your screen.</string>
 		
