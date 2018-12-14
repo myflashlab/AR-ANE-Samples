@@ -38,7 +38,7 @@ While running the sample AIR project, you will need some targets to initiate the
 # Commercial Version
 http://www.myflashlabs.com/product/augmented-reality-ane-adobe-air-native-extension/
 
-![Augmented Reality ANE](https://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-augmented-reality-595x738.jpg)
+[![Augmented Reality ANE](https://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-augmented-reality-595x738.jpg)](http://www.myflashlabs.com/product/augmented-reality-ane-adobe-air-native-extension/)
 
 **IMPORTANT: After purchasing the commercial version of the ANE from Myflashlabs store, you will receive a discount coupon. You can use that coupon to purchase Wikitude license.**
 
