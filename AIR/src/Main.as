@@ -103,7 +103,11 @@ public class Main extends Sprite
 	
 	public function Main()
 	{
-		OverrideAir.enableDebugger(myDebuggerDelegate);
+		// Remove OverrideAir debugger in production builds
+		OverrideAir.enableDebugger(function ($ane:String, $class:String, $msg:String):void
+		{
+			trace($ane+" ("+$class+") "+$msg);
+		});
 		
 		Multitouch.inputMode = MultitouchInputMode.GESTURE;
 		NativeApplication.nativeApplication.addEventListener(KeyboardEvent.KEY_DOWN, handleKeys);
@@ -150,11 +154,6 @@ public class Main extends Sprite
 		}
 	}
 	
-	private function myDebuggerDelegate($ane:String, $class:String, $msg:String):void
-	{
-		trace("["+$ane+"-"+$class+"]"+$msg);
-	}
-	
 	private function handleKeys(e:KeyboardEvent):void
 	{
 		if(e.keyCode == Keyboard.BACK)
@@ -183,21 +182,21 @@ public class Main extends Sprite
 				return;
 			}
 			
-			if(AR.os == AR.ANDROID && PermissionCheck.check(PermissionCheck.SOURCE_LOCATION) == PermissionCheck.PERMISSION_GRANTED)
+			if(OverrideAir.os == OverrideAir.ANDROID && PermissionCheck.check(PermissionCheck.SOURCE_LOCATION) == PermissionCheck.PERMISSION_GRANTED)
 			{
 				onLocationRequestResult({state:PermissionCheck.PERMISSION_GRANTED});
 			}
-			else if(AR.os == AR.IOS && PermissionCheck.check(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE) == PermissionCheck.PERMISSION_GRANTED)
+			else if(OverrideAir.os == OverrideAir.IOS && PermissionCheck.check(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE) == PermissionCheck.PERMISSION_GRANTED)
 			{
 				onLocationRequestResult({state:PermissionCheck.PERMISSION_GRANTED});
 			}
 			else
 			{
-				if(AR.os == AR.ANDROID)
+				if(OverrideAir.os == OverrideAir.ANDROID)
 				{
 					PermissionCheck.request(PermissionCheck.SOURCE_LOCATION, onLocationRequestResult);
 				}
-				else if(AR.os == AR.IOS)
+				else if(OverrideAir.os == OverrideAir.IOS)
 				{
 					PermissionCheck.request(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE, onLocationRequestResult);
 				}
@@ -212,7 +211,7 @@ public class Main extends Sprite
 				return;
 			}
 			
-			if(AR.os == AR.ANDROID)
+			if(OverrideAir.os == OverrideAir.ANDROID)
 			{
 				if(PermissionCheck.check(PermissionCheck.SOURCE_STORAGE) == PermissionCheck.PERMISSION_GRANTED)
 				{
@@ -378,14 +377,14 @@ public class Main extends Sprite
 		_arSettings.hasIR = true;
 		_arSettings.hasObject = true;
 		
-		if(AR.os == AR.ANDROID)
+		if(OverrideAir.os == OverrideAir.ANDROID)
 		{
 			// Android specific settings
 			_arSettings.android.cam2Enabled = false;
 			_arSettings.android.fullscreenMode = true;
 			_arSettings.android.camFocusDistanceAndroid = 1;
 		}
-		else if(AR.os == AR.IOS)
+		else if(OverrideAir.os == OverrideAir.IOS)
 		{
 			// iOS specific settings
 			_arSettings.ios.camFocusDistance = -1.0;

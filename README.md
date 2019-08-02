@@ -15,7 +15,7 @@ In this repository, you will find all the necessary information about how to imp
 
 # Download The ANE
 
-You have access to the [demo ANE](https://www.myflashlabs.com/anelab/ar114.ane) and [sample .apk file](https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing)
+You have access to the [demo ANE](https://www.myflashlabs.com/anelab/ar1141.ane) and [sample .apk file](https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing)
 
 **Note:** The size of the ANE is huge! This does NOT mean that your final app build would be that large. ANEs include different build archs but when you compile your app, only the required archs will be compiled into your final app. That said, the AR ANE is still the biggest ANE we have ever built, byte-size wise talking.
 
@@ -30,7 +30,7 @@ While running the sample AIR project, you will need some targets to initiate the
 # Requirements
 
 1. Android API 19+
-2. iOS SDK 9.0+
+2. iOS SDK 10.0+
 3. AIR SDK 30+
 4. This ANE is dependent on **[overrideAir.ane](https://github.com/myflashlab/common-dependencies-ANE/tree/master/overridAir)** and **[permissionCheck.ane](https://github.com/myflashlab/PermissionCheck-ANE/tree/master/AIR/lib)**. You need to add these ANEs to your project too.
 5. To compile on iOS, you will need to create a folder named ```Frameworks``` at the root of your project and copy the [WikitudeSDK.framework V7.2.1](https://github.com/myflashlab/AR-ANE-Samples/blob/master/Wikitude_iOS_SDK.zip) file to this folder and make sure it is packaged in your iOS build. (it must be included in your project, just like any resources).

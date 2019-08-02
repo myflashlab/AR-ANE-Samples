@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/31.0">
+<application xmlns="http://ns.adobe.com/air/application/32.0">
   <id>com.doitflash.ar</id>
-  <versionNumber>1.1.4</versionNumber>
+  <versionNumber>1.1.41</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exAr</filename>
   <name>exAr</name>
@@ -46,7 +46,7 @@
         android:normalScreens="true" android:anyDensity="true"
         android:xlargeScreens="true" />
 	
-	<uses-sdk android:targetSdkVersion="26"/>
+	<uses-sdk android:targetSdkVersion="28"/>
 	
 	<application>
 		
@@ -78,14 +78,12 @@
   </android>
 	
   <iPhone>
-    <!--https://developer.apple.com/library/ios/documentation/general/reference/infoplistkeyreference/Articles/iPhoneOSKeys.html-->
-    <!--http://help.adobe.com/en_US/air/build/WSfffb011ac560372f7e64a7f12cd2dd1867-8000.html-->
 	  
 	 <InfoAdditions><![CDATA[
 	
-		<!--iOS 9.0 or higher can support this ANE-->
+		<!--iOS 10.0 or higher can support this ANE-->
 		<key>MinimumOSVersion</key>
-		<string>9.0</string>
+		<string>10.0</string>
 		 
 		<key>UIPrerenderedIcon</key>
 		<true/>
@@ -126,27 +124,13 @@
     <!-- required for 3D -->
     <systemChrome>standard</systemChrome>
   </initialWindow>
-    <icon>
-        <image16x16>icons/icon_16.png</image16x16>
-        <image29x29>icons/icon_29.png</image29x29>
-        <image32x32>icons/icon_32.png</image32x32>
+  <icon>
         <image36x36>icons/icon_36.png</image36x36>
-        <image40x40>icons/icon_40.png</image40x40>
         <image48x48>icons/icon_48.png</image48x48>
-        <image50x50>icons/icon_50.png</image50x50>
-        <image57x57>icons/icon_57.png</image57x57>
-        <image58x58>icons/icon_58.png</image58x58>
-        <image60x60>icons/icon_60.png</image60x60>
         <image72x72>icons/icon_72.png</image72x72>
-        <image76x76>icons/icon_76.png</image76x76>
-        <image80x80>icons/icon_80.png</image80x80>
         <image96x96>icons/icon_96.png</image96x96>
-        <image100x100>icons/icon_100.png</image100x100>
-        <image114x114>icons/icon_114.png</image114x114>
-        <image120x120>icons/icon_120.png</image120x120>
-        <image128x128>icons/icon_128.png</image128x128>
         <image144x144>icons/icon_144.png</image144x144>
-        <image152x152>icons/icon_152.png</image152x152>
+        <image192x192>icons/icon_192.png</image192x192>
         <image512x512>icons/icon_512.png</image512x512>
         <image1024x1024>icons/icon_1024.png</image1024x1024>
     </icon>

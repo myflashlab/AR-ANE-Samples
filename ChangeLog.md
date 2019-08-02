@@ -1,5 +1,10 @@
 MyAR Adobe Air Native Extension
 
+*Aug 2, 2019 - V7.2.1-1.1.41*
+* Added Android 64-bit support
+* Supports iOS 10.0
+* removed static property ```AR.os```. You should use ```OverrideAir.os``` instead.
+
 *Nov 16, 2018 - V7.2.1-1.1.4*
 * Works with OverrideAir ANE V5.6.1 or higher
 * Works with ANELAB V1.1.26 or higher
