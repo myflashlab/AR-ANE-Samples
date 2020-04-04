@@ -2,7 +2,7 @@
 
 This ANE is built on Wikitude SDK and allows you to create Augmented Reality in your apps without knowing any 3D engine programming. You can create complex AR scenes using HTML/JS only.
 
-In this repository, you will find all the necessary information about how to implement the AR ANE in your project. make sure you are reading the [wiki pages](https://github.com/myflashlab/AR-ANE-Samples/wiki) for more detailed information. You may also find the latest asdoc for this ANE [here](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/ar/package-detail.html).
+In this repository, you will find all the necessary information about how to implement the AR ANE in your project. make sure you are reading the [wiki pages](https://github.com/myflashlab/AR-ANE-Samples/wiki) for more detailed information. You may also find the latest asdoc for this ANE [here](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/ar/package-detail.html).
 
 **Main Features:**
 
@@ -15,7 +15,7 @@ In this repository, you will find all the necessary information about how to imp
 
 # Download The ANE
 
-You have access to the [demo ANE](https://www.myflashlabs.com/anelab/ar1141.ane) and [sample .apk file](https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing)
+You have access to the [demo ANE](https://www.myflashlabs.com/anelab/ar202.ane) and [sample .apk file](https://drive.google.com/drive/folders/0B7eHG2CEml2TN3B5emFxYlNkQXM?usp=sharing)
 
 **Note:** The size of the ANE is huge! This does NOT mean that your final app build would be that large. ANEs include different build archs but when you compile your app, only the required archs will be compiled into your final app. That said, the AR ANE is still the biggest ANE we have ever built, byte-size wise talking.
 

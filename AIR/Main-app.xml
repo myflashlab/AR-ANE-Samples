@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/32.0">
   <id>com.doitflash.ar</id>
-  <versionNumber>1.1.41</versionNumber>
+  <versionNumber>2.0.2</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exAr</filename>
   <name>exAr</name>
@@ -142,8 +142,8 @@
       <extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
 
       <!-- Dependencies -->
-      <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.core</extensionID>
-      <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.v4</extensionID>
+      <extensionID>com.myflashlab.air.extensions.dependency.androidx.core</extensionID>
+      <extensionID>com.myflashlab.air.extensions.dependency.androidx.lifecycle</extensionID>
       <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
 
   </extensions>

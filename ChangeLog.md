@@ -1,5 +1,8 @@
 MyAR Adobe Air Native Extension
 
+*Apr 04, 2020 - V7.2.1-2.0.2*
+* Upgraded to Androidx
+
 *Aug 2, 2019 - V7.2.1-1.1.41*
 * Added Android 64-bit support
 * Supports iOS 10.0+
